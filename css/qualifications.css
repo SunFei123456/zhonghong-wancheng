@@ -1,0 +1,113 @@
+/* 资质背书模块独立样式: qualifications.css */
+
+.qualifications-section{
+  padding: 60px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+
+}
+
+.qual-header{
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.qual-header h2{
+  font-size: 2.5rem;
+  color: #0b2b3a;
+  letter-spacing: 0.2px;
+}
+
+.qual-header .muted{
+  color: #6b7a85;
+  margin-top: 8px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.badge-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.qual-card{
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(11,43,58,0.06);
+  padding: 22px;
+  height: 500px;
+  text-align: center;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent 40%), url('../images/zz.jpg');
+}
+
+.qual-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(11,43,58,0.12);
+}
+
+/*  底部居中 */
+.content-lis{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 0 16px;
+}
+
+
+.qual-title{
+  font-size: 18px;
+  color: #ffffff;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.qual-desc{
+  color: #e0e0e0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.qual-cta{
+  margin-top: 28px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+
+
+
+/* 响应式处理 */
+@media (max-width: 992px){
+  .badge-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px){
+  .badge-grid{ grid-template-columns: 1fr; }
+  .qualifications-section{ padding: 36px 12px; }
+  .qual-header h2{ font-size: 20px; }
+}
+
+/* 细节：焦点态和无障碍 */
+.qual-card:focus, .qual-card a:focus{
+  outline: 3px solid rgba(13,122,160,0.14);
+  outline-offset: 2px;
+}
+
+/* 小型视觉装饰 */
+.qual-card::after{
+  content: '';
+  display: block;
+  height: 2px;
+  width: 40px;
+  background: rgba(255,255,255,0.8);
+  margin: 18px auto 0 auto;
+  border-radius: 2px;
+}
