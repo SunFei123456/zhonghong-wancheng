@@ -1,0 +1,258 @@
+/* 建筑动画/多媒体页面 */
+
+.container-wide{ max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
+
+.aa-label{ 
+  display: inline-block; 
+  font-size: 0.7rem; 
+  text-transform: uppercase; 
+  letter-spacing: 0.2em; 
+  color: #d12b26; 
+  font-weight: 700; 
+  margin-bottom: 1rem;
+}
+
+/* Hero */
+.aa-hero{ 
+  position: relative; 
+  height: 70vh; 
+  min-height: 500px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: #ffffff; 
+  overflow: hidden; 
+}
+.aa-hero-bg{ 
+  position: absolute; 
+  inset: 0; 
+  background-size: cover; 
+  background-position: center; 
+  filter: brightness(0.5);
+}
+.aa-hero:after{ 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  background: rgba(0,0,0,0.3);
+}
+.aa-hero-content{ 
+  position: relative; 
+  z-index: 2; 
+  text-align: center; 
+}
+.aa-hero-content h1{ 
+  font-size: 4.5rem; 
+  font-weight: 900; 
+  margin-bottom: 1rem;
+}
+.aa-hero-content p{ 
+  font-size: 1.5rem; 
+  font-weight: 300;
+}
+
+/* 介绍 */
+.aa-intro{
+  padding: 10rem 0;
+  background: #ffffff;
+  text-align: center;
+}
+.aa-intro-content{
+  max-width: 900px;
+  margin: 0 auto;
+}
+.aa-intro-content h2{
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0b2b3a;
+  margin-bottom: 1.5rem;
+}
+.aa-intro-content p{
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #4b5563;
+}
+
+/* 服务类型 - 全屏视差 */
+.aa-services{
+  padding: 0;
+}
+.aa-service-block{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.aa-service-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+}
+.aa-service-content{
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 4rem;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+.aa-service-num{
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.3);
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+.aa-service-content h3{
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+.aa-service-content > p{
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+  line-height: 1.8;
+}
+.aa-service-features{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.aa-service-features li{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.05rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.aa-service-features li:hover{
+  background: rgba(255,255,255,0.15);
+  transform: translateX(5px);
+}
+.aa-service-features i{
+  font-size: 1.3rem;
+  color: #d12b26;
+  filter: brightness(1.5);
+}
+
+/* 技术优势 */
+.aa-advantages{
+  padding: 10rem 0;
+  background: linear-gradient(180deg, #f8fafb 0%, #ffffff 100%);
+}
+.aa-section-header{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.aa-section-header h2{
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0b2b3a;
+}
+.aa-adv-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.aa-adv-card{
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(9,20,40,0.06);
+  transition: all 0.3s ease;
+}
+.aa-adv-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(9,20,40,0.12);
+}
+.aa-adv-icon{
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d12b26, #f7532e);
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+.aa-adv-card h4{
+  font-size: 1.5rem;
+  color: #0b2b3a;
+  margin-bottom: 0.8rem;
+}
+.aa-adv-card p{
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* CTA */
+.aa-cta{
+  padding: 12rem 0;
+  background: linear-gradient(135deg, #d12b26, #f7532e);
+  text-align: center;
+  color: #ffffff;
+}
+.aa-cta-content h2{
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+.aa-cta-content p{
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+}
+.btn-lg{
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+}
+
+/* 响应式 */
+@media (max-width: 1200px){
+  .aa-service-features{
+    grid-template-columns: 1fr;
+  }
+  .aa-adv-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px){
+  .container-wide{ padding: 0 1.5rem; }
+  .aa-hero{ min-height: 400px; }
+  .aa-hero-content h1{ font-size: 2.8rem; }
+  .aa-hero-content p{ font-size: 1.2rem; }
+  .aa-intro{ padding: 6rem 0; }
+  .aa-intro-content h2{ font-size: 2rem; }
+  .aa-service-block{ min-height: 100vh; background-attachment: scroll; }
+  .aa-service-content{ padding: 3rem 2rem; }
+  .aa-service-content h3{ font-size: 2rem; }
+  .aa-service-content > p{ font-size: 1.1rem; }
+  .aa-advantages{ padding: 6rem 0; }
+  .aa-section-header h2{ font-size: 2rem; }
+  .aa-adv-grid{ grid-template-columns: 1fr; }
+  .aa-cta{ padding: 8rem 0; }
+  .aa-cta-content h2{ font-size: 2rem; }
+}
+

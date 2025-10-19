@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>设计可视化 - 中泓万城</title>
+    <meta name="description" content="建筑效果图设计、建筑动画制作、多媒体展示 - 专业可视化解决方案" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/design-visualization.css" />
+</head>
+
+<body>
+    <!-- 统一导航 -->
+    <header class="navbar" id="navbar">
+        <div class="navbar-top">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="images/logo.png" alt="中泓万城" class="logo" />
+                    <span class="brand-text">中泓万城</span>
+                </div>
+                <div class="nav-top-right">
+                    <div class="contact-phone"><i class="fas fa-phone"></i><span>400-400-4000</span></div>
+                    <div class="search-box"><input type="text" class="search-input" placeholder="搜索..." /><button
+                            class="search-btn"><i class="fas fa-search"></i></button></div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-bottom">
+            <div class="container">
+                <nav class="nav-menu" id="nav-menu">
+                    <div class="nav-item"><a href="index.html#home" class="nav-link">首页</a></div>
+                    <div class="nav-item">
+                        <a href="municipal.html" class="nav-link">市政施工 <i
+                                class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="water.html" class="dropdown-item">水系统</a>
+                            <a href="municipal.html#electrical-system" class="dropdown-item">电系统</a>
+                            <a href="municipal.html#road-system" class="dropdown-item">路系统</a>
+                            <a href="municipal.html#gas-system" class="dropdown-item">气系统</a>
+                            <a href="municipal.html#greening-system" class="dropdown-item">绿系统</a>
+                            <a href="municipal.html#other-engineering" class="dropdown-item">其他工程</a>
+                        </div>
+                    </div>
+                    <div class="nav-item"><a href="urban-renewal.html" class="nav-link">城市更新和运营</a></div>
+                    <div class="nav-item">
+                        <a href="design-visualization.html" class="nav-link">设计可视化 <i
+                                class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="architectural-design.html" class="dropdown-item">建筑设计图</a>
+                            <a href="architectural-animation.html" class="dropdown-item">建筑动画/多媒体</a>
+                        </div>
+                    </div>
+                    <div class="nav-item"><a href="about.html" class="nav-link">公司简介</a></div>
+                    <div class="nav-item"><a href="contact.html" class="nav-link">联系我们</a></div>
+                </nav>
+                <div class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="dv-hero">
+            <div class="dv-hero-bg" style="background-image:url('./images/banner.png')"></div>
+            <div class="dv-hero-content">
+                <h1 class="dv-hero-title" data-aos="fade-up">设计可视化</h1>
+                <p class="dv-hero-subtitle" data-aos="fade-up" data-aos-delay="100">让设计更直观 · 让创意更真实</p>
+                <p class="dv-hero-desc" data-aos="fade-up" data-aos-delay="200">
+                    建筑效果图 · 建筑动画 · 多媒体展示
+                </p>
+            </div>
+        </section>
+
+        <!-- 面包屑 -->
+        <nav class="breadcrumb" data-aos="fade-down">
+            <a href="index.html#home">首页</a>
+            <span>/</span>
+            <span>设计可视化</span>
+        </nav>
+
+        <!-- 概览 -->
+        <section class="dv-intro">
+            <div class="container-wide">
+                <div class="dv-intro-content" data-aos="fade-up">
+                    <span class="dv-label">Visualization</span>
+                    <h2>专业的设计可视化服务</h2>
+                    <p>通过先进的三维建模、渲染技术与动画制作，将设计理念转化为真实可感的视觉体验。从静态效果图到动态演示动画，全方位呈现项目价值。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 两大服务板块 -->
+        <section class="dv-services">
+            <!-- 建筑设计图 -->
+            <article class="dv-service-card" data-aos="fade-up">
+                <div class="dv-service-image">
+                    <img src="./images/1.jpg" alt="建筑设计图" />
+                    <div class="dv-service-overlay">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                </div>
+                <div class="dv-service-content">
+                    <h3>建筑设计图</h3>
+                    <p>高精度建筑效果图制作，真实还原材质、光影与空间氛围，为项目决策提供直观依据。</p>
+                    <ul class="dv-feature-list">
+                        <li><i class="fas fa-check"></i>室内外效果图</li>
+                        <li><i class="fas fa-check"></i>鸟瞰图与透视图</li>
+                        <li><i class="fas fa-check"></i>日景与夜景表现</li>
+                        <li><i class="fas fa-check"></i>材质细节展示</li>
+                    </ul>
+                    <a href="architectural-design.html" class="btn btn-primary">了解更多</a>
+                </div>
+            </article>
+
+            <!-- 建筑动画/多媒体 -->
+            <article class="dv-service-card reverse" data-aos="fade-up" data-aos-delay="200">
+                <div class="dv-service-image">
+                    <img src="./images/2.jpg" alt="建筑动画" />
+                    <div class="dv-service-overlay">
+                        <i class="fas fa-video"></i>
+                    </div>
+                </div>
+                <div class="dv-service-content">
+                    <h3>建筑动画/多媒体</h3>
+                    <p>动态演示建筑空间与功能，通过镜头语言讲述项目故事，打造沉浸式视觉体验。</p>
+                    <ul class="dv-feature-list">
+                        <li><i class="fas fa-check"></i>建筑漫游动画</li>
+                        <li><i class="fas fa-check"></i>施工工艺演示</li>
+                        <li><i class="fas fa-check"></i>VR虚拟现实</li>
+                        <li><i class="fas fa-check"></i>多媒体宣传片</li>
+                    </ul>
+                    <a href="architectural-animation.html" class="btn btn-primary">了解更多</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- 服务流程 -->
+        <section class="dv-process">
+            <div class="container-wide">
+                <div class="dv-section-header" data-aos="fade-up">
+                    <span class="dv-label">Process</span>
+                    <h2>服务流程</h2>
+                </div>
+                <div class="dv-process-grid">
+                    <div class="dv-process-item" data-aos="fade-up">
+                        <div class="dv-process-num">01</div>
+                        <h4>需求沟通</h4>
+                        <p>了解项目背景、设计理念与展示需求</p>
+                    </div>
+                    <div class="dv-process-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="dv-process-num">02</div>
+                        <h4>方案策划</h4>
+                        <p>制定视觉表现方案与技术实施路径</p>
+                    </div>
+                    <div class="dv-process-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="dv-process-num">03</div>
+                        <h4>建模渲染</h4>
+                        <p>精细建模、材质调整与灯光渲染</p>
+                    </div>
+                    <div class="dv-process-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="dv-process-num">04</div>
+                        <h4>后期制作</h4>
+                        <p>图像优化、动画剪辑与特效合成</p>
+                    </div>
+                    <div class="dv-process-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="dv-process-num">05</div>
+                        <h4>交付验收</h4>
+                        <p>成果交付、修改完善与技术支持</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="dv-cta">
+            <div class="dv-cta-content" data-aos="zoom-in">
+                <h2>需要专业的可视化服务？</h2>
+                <p>联系我们，获取定制化解决方案</p>
+                <div class="dv-cta-actions">
+                    <a href="index.html#diagnosis-tool" class="btn btn-primary btn-lg">获取报价</a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">联系我们</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 统一页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand"><img src="images/logo.png" alt="中泓万城" class="footer-logo" />
+                        <h3>中泓万城</h3>
+                        <p>市政施工与城市更新整体解决方案提供商</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>核心业务</h4>
+                    <ul>
+                        <li><a href="municipal.html">市政施工</a></li>
+                        <li><a href="urban-renewal.html">城市更新和运营</a></li>
+                        <li><a href="design-visualization.html">设计可视化</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>经典案例</h4>
+                    <ul>
+                        <li><a href="index.html#case-library">案例库</a></li>
+                        <li><a href="index.html#cases">轮播精选</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <div class="contact-item"><i class="fas fa-phone"></i><span>400-400-4000</span></div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i><span>info@zhongwancheng.com</span></div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>北京市朝阳区XXX大厦</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 中泓万城. 保留所有权利. | 京ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+/* 联系我们页面 */
+
+.container-wide{ max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
+
+/* Hero */
+.contact-hero{
+  padding: 12rem 0 8rem;
+  background: linear-gradient(135deg, #0b2b3a 0%, #1a4d5e 100%);
+  text-align: center;
+  color: #ffffff;
+}
+.contact-hero-content h1{
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.contact-hero-content p{
+  font-size: 1.5rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* 主要内容区 */
+.contact-main{
+  padding: 8rem 0;
+  background: #ffffff;
+}
+.contact-grid{
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6rem;
+}
+
+/* 联系信息 */
+.contact-info h2{
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #0b2b3a;
+  margin-bottom: 1rem;
+}
+.contact-desc{
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+.contact-info-list{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.contact-info-item{
+  display: flex;
+  gap: 1.5rem;
+}
+.contact-info-icon{
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d12b26, #f7532e);
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+.contact-info-content h4{
+  font-size: 1.2rem;
+  color: #0b2b3a;
+  margin-bottom: 0.5rem;
+}
+.contact-info-content p{
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+.contact-social{
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+.contact-social h4{
+  font-size: 1.2rem;
+  color: #0b2b3a;
+  margin-bottom: 1.5rem;
+}
+.contact-social-icons{
+  display: flex;
+  gap: 1rem;
+}
+.contact-social-icon{
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+.contact-social-icon:hover{
+  background: linear-gradient(135deg, #d12b26, #f7532e);
+  color: #ffffff;
+  transform: translateY(-5px);
+}
+
+/* 联系表单 */
+.contact-form-wrapper{
+  background: #f9fafb;
+  padding: 4rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(9,20,40,0.08);
+}
+.contact-form h3{
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0b2b3a;
+  margin-bottom: 0.5rem;
+}
+.form-desc{
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 3rem;
+}
+.form-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.form-group{
+  margin-bottom: 1.5rem;
+}
+.form-group label{
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  outline: none;
+  border-color: #d12b26;
+  box-shadow: 0 0 0 3px rgba(209,43,38,0.1);
+}
+.form-group textarea{
+  resize: vertical;
+}
+.btn-block{
+  width: 100%;
+  margin-top: 1rem;
+}
+.btn-lg{
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+}
+
+/* 地图区域 */
+.contact-map{
+  padding: 0;
+}
+.contact-map-container{
+  height: 500px;
+  background: #f3f4f6;
+}
+.contact-map-placeholder{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+}
+.contact-map-placeholder i{
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.contact-map-placeholder p{
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.contact-map-placeholder small{
+  font-size: 0.9rem;
+}
+
+/* 响应式 */
+@media (max-width: 1200px){
+  .contact-grid{
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px){
+  .container-wide{ padding: 0 1.5rem; }
+  .contact-hero{ padding: 8rem 0 6rem; }
+  .contact-hero-content h1{ font-size: 3rem; }
+  .contact-hero-content p{ font-size: 1.2rem; }
+  .contact-main{ padding: 6rem 0; }
+  .contact-info h2{ font-size: 2rem; }
+  .contact-form-wrapper{ padding: 2.5rem 2rem; }
+  .contact-form h3{ font-size: 1.6rem; }
+  .form-row{ grid-template-columns: 1fr; }
+  .contact-map-container{ height: 350px; }
+}
+

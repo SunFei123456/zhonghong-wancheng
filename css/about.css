@@ -1,0 +1,307 @@
+/* 公司简介页面 */
+
+.container-wide{ max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
+
+.about-label{ 
+  display: inline-block; 
+  font-size: 0.7rem; 
+  text-transform: uppercase; 
+  letter-spacing: 0.2em; 
+  color: #d12b26; 
+  font-weight: 700; 
+  margin-bottom: 1rem;
+}
+
+/* Hero */
+.about-hero{ 
+  position: relative; 
+  height: 70vh; 
+  min-height: 500px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: #ffffff; 
+  overflow: hidden; 
+}
+.about-hero-bg{ 
+  position: absolute; 
+  inset: 0; 
+  background-size: cover; 
+  background-position: center; 
+  filter: brightness(0.4);
+}
+.about-hero:after{ 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  background: rgba(0,0,0,0.3);
+}
+.about-hero-content{ 
+  position: relative; 
+  z-index: 2; 
+  text-align: center; 
+}
+.about-hero-content h1{ 
+  font-size: 5rem; 
+  font-weight: 900; 
+  margin-bottom: 1rem;
+}
+.about-hero-content p{ 
+  font-size: 1.6rem; 
+  font-weight: 300;
+}
+
+/* 公司概况 */
+.about-overview{
+  padding: 10rem 0;
+  background: #ffffff;
+}
+.about-intro{
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 6rem;
+}
+.about-intro h2{
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #0b2b3a;
+  margin-bottom: 2rem;
+}
+.about-lead{
+  font-size: 1.3rem;
+  line-height: 2;
+  color: #4b5563;
+}
+.about-stats{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+.about-stat-item{
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f8fafb, #ffffff);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(9,20,40,0.06);
+  transition: all 0.3s ease;
+}
+.about-stat-item:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(9,20,40,0.12);
+}
+.about-stat-num{
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #d12b26, #f7532e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+.about-stat-label{
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+/* 核心业务 */
+.about-business{
+  padding: 10rem 0;
+  background: linear-gradient(180deg, #f8fafb 0%, #ffffff 100%);
+}
+.about-section-header{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.about-section-header h2{
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0b2b3a;
+}
+.about-business-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.about-business-card{
+  padding: 3rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(9,20,40,0.06);
+  transition: all 0.3s ease;
+}
+.about-business-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(9,20,40,0.12);
+}
+.about-business-icon{
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d12b26, #f7532e);
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.about-business-card h3{
+  font-size: 1.8rem;
+  color: #0b2b3a;
+  margin-bottom: 1rem;
+}
+.about-business-card p{
+  font-size: 1.1rem;
+  color: #6b7280;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+.about-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #d12b26;
+  text-decoration: none;
+  font-weight: 600;
+  transition: gap 0.3s ease;
+}
+.about-link:hover{
+  gap: 1rem;
+}
+
+/* 企业优势 */
+.about-advantages{
+  padding: 10rem 0;
+  background: #ffffff;
+}
+.about-adv-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+.about-adv-item{
+  padding: 3rem;
+  background: linear-gradient(135deg, #f8fafb, #ffffff);
+  border-radius: 20px;
+  border-left: 4px solid #d12b26;
+  transition: all 0.3s ease;
+}
+.about-adv-item:hover{
+  transform: translateX(10px);
+  box-shadow: 0 20px 60px rgba(9,20,40,0.1);
+}
+.about-adv-num{
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(209,43,38,0.2);
+  margin-bottom: 1rem;
+}
+.about-adv-item h4{
+  font-size: 1.8rem;
+  color: #0b2b3a;
+  margin-bottom: 1rem;
+}
+.about-adv-item p{
+  font-size: 1.1rem;
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+/* 企业文化 */
+.about-culture{
+  padding: 10rem 0;
+  background: linear-gradient(135deg, #0b2b3a 0%, #1a4d5e 100%);
+}
+.about-culture-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.about-culture-item{
+  text-align: center;
+  padding: 4rem 3rem;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.about-culture-item:hover{
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-10px);
+}
+.about-culture-icon{
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.3);
+  font-size: 3rem;
+}
+.about-culture-item h3{
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.about-culture-item p{
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* CTA */
+.about-cta{
+  padding: 12rem 0;
+  background: linear-gradient(135deg, #d12b26, #f7532e);
+  text-align: center;
+  color: #ffffff;
+}
+.about-cta-content h2{
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+.about-cta-content p{
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+}
+.btn-lg{
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+}
+
+/* 响应式 */
+@media (max-width: 1200px){
+  .about-stats{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-business-grid{
+    grid-template-columns: 1fr;
+  }
+  .about-culture-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px){
+  .container-wide{ padding: 0 1.5rem; }
+  .about-hero{ min-height: 400px; }
+  .about-hero-content h1{ font-size: 3rem; }
+  .about-hero-content p{ font-size: 1.2rem; }
+  .about-overview{ padding: 6rem 0; }
+  .about-intro h2{ font-size: 2.5rem; }
+  .about-lead{ font-size: 1.1rem; }
+  .about-stats{ grid-template-columns: 1fr; gap: 2rem; }
+  .about-stat-num{ font-size: 3rem; }
+  .about-business{ padding: 6rem 0; }
+  .about-section-header h2{ font-size: 2rem; }
+  .about-advantages{ padding: 6rem 0; }
+  .about-adv-grid{ grid-template-columns: 1fr; }
+  .about-culture{ padding: 6rem 0; }
+  .about-cta{ padding: 8rem 0; }
+  .about-cta-content h2{ font-size: 2.5rem; }
+}
+

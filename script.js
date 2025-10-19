@@ -383,3 +383,4 @@ document.addEventListener('DOMContentLoaded', function () {
         accordion.scrollLeft = scrollLeft - walk;
     });
 })();
+
