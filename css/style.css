@@ -465,6 +465,33 @@ main {
     margin-bottom: 3rem;
 }
 
+/* 面包屑导航（通用） */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    margin: 2rem;
+}
+
+.breadcrumb a, .breadcrumb a {
+    color: rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover, .breadcrumb a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.breadcrumb span, .breadcrumb span {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumb span:last-child, .breadcrumb span:last-child {
+    color: rgba(0, 0, 0, 0.9);
+}
+
 
 
 

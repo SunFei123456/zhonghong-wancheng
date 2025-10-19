@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>市政施工概览 - 中泓万城</title>
+    <meta name="description" content="市政施工业务板块总体介绍，涵盖水、电、路、气、绿、其他工程配套。" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/municipal.css" />
+</head>
+
+<body>
+    <!-- 统一导航 -->
+    <header class="navbar" id="navbar">
+        <div class="navbar-top">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="images/logo.png" alt="中泓万城" class="logo" />
+                    <span class="brand-text">中泓万城</span>
+                </div>
+                <div class="nav-top-right">
+                    <div class="contact-phone">
+                        <i class="fas fa-phone"></i>
+                        <span>400-400-4000</span>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="搜索..." />
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-bottom">
+            <div class="container">
+                <nav class="nav-menu" id="nav-menu">
+                    <div class="nav-item"><a href="index.html#home" class="nav-link">首页</a></div>
+                    <div class="nav-item">
+                        <a href="municipal.html" class="nav-link">市政施工 <i
+                                class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="water.html" class="dropdown-item">水系统</a>
+                            <a href="#electrical-system" class="dropdown-item">电系统</a>
+                            <a href="#road-system" class="dropdown-item">路系统</a>
+                            <a href="#gas-system" class="dropdown-item">气系统</a>
+                            <a href="#greening-system" class="dropdown-item">绿系统</a>
+                            <a href="#other-engineering" class="dropdown-item">其他工程</a>
+                        </div>
+                    </div>
+                    <div class="nav-item"><a href="index.html#urban-renewal" class="nav-link">城市更新和运营</a></div>
+                    <div class="nav-item">
+                        <a href="index.html#design-visualization" class="nav-link">设计可视化 <i
+                                class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="index.html#architectural-design" class="dropdown-item">建筑设计图</a>
+                            <a href="index.html#architectural-animation" class="dropdown-item">建筑动画/多媒体</a>
+                        </div>
+                    </div>
+                    <div class="nav-item"><a href="index.html#about" class="nav-link">公司简介</a></div>
+                    <div class="nav-item"><a href="index.html#contact" class="nav-link">联系我们</a></div>
+                </nav>
+                <div class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 顶部横幅：大方、克制、强调总述 -->
+        <section class="m-hero" id="top">
+            <div class="m-hero-bg" style="background-image:url('./images/banner1.jpg')"></div>
+            <div class="container m-hero-inner">
+                <h1 class="m-hero-title" data-aos="fade-up">市政施工业务概览</h1>
+                <p class="m-hero-sub" data-aos="fade-up" data-aos-delay="150">“水、电、路、气、绿、排”等工程配套整体解决方案</p>
+                <div class="m-hero-cta" data-aos="fade-up" data-aos-delay="300">
+                    <a class="btn btn-primary" href="#sections">浏览六大分类</a>
+                    <a class="btn btn-outline" href="index.html#qualifications">查看资质</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 总体简述区 -->
+        <section class="m-intro">
+            <div class="container m-intro-inner">
+                <div class="m-intro-text" data-aos="fade-right">
+                    <h2>总体简要描述</h2>
+                    <p>我们围绕城市基础设施全生命周期，提供规划咨询、方案设计、施工交付与运维保障一体化服务，覆盖市政配套的核心要素：给排水、电力与弱电、道路及场地、燃气接驳、绿化景观与配套，以及消防、围墙与大门、热力等其他系统。
+                    </p>
+                    <p>以质量、安全、工期为硬约束，以标准化施工与数字化管理为抓手，确保复杂场景下的协同实施与合规交付。</p>
+                </div>
+                <div class="m-intro-stats" data-aos="fade-left">
+                    <div class="m-kpi">
+                        <div class="num">9+</div>
+                        <div class="label">行业年限</div>
+                    </div>
+                    <div class="m-kpi">
+                        <div class="num">100+</div>
+                        <div class="label">交付项目</div>
+                    </div>
+                    <div class="m-kpi">
+                        <div class="num">3A</div>
+                        <div class="label">安全体系</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 六大分类：照片磁贴入口（位于总体描述下方） -->
+            <div class="m-sections" id="sections">
+                <div class="container m-sections-grid">
+                    <a class="m-tile" href="water.html" style="background-image:url('./images/1.jpg')"
+                        data-aos="zoom-in">
+                        <span class="m-tile-mask"></span>
+                        <span class="m-tile-text">
+                            <strong>水系统</strong>
+                            <em>给水系统、排水排污系统</em>
+                        </span>
+                    </a>
+                    <a class="m-tile" href="#electrical-system" style="background-image:url('./images/2.jpg')"
+                        data-aos="zoom-in" data-aos-delay="80">
+                        <span class="m-tile-mask"></span>
+                        <span class="m-tile-text">
+                            <strong>电系统</strong>
+                            <em>强电、弱电工程</em>
+                        </span>
+                    </a>
+                    <a class="m-tile" href="#road-system" style="background-image:url('./images/3.jpg')"
+                        data-aos="zoom-in" data-aos-delay="160">
+                        <span class="m-tile-mask"></span>
+                        <span class="m-tile-text">
+                            <strong>路系统</strong>
+                            <em>道路硬化及辅助设施</em>
+                        </span>
+                    </a>
+                    <a class="m-tile" href="#gas-system" style="background-image:url('./images/4.jpg')"
+                        data-aos="zoom-in" data-aos-delay="240">
+                        <span class="m-tile-mask"></span>
+                        <span class="m-tile-text">
+                            <strong>气系统</strong>
+                            <em>燃气工程</em>
+                        </span>
+                    </a>
+                    <a class="m-tile" href="#greening-system" style="background-image:url('./images/banner.png')"
+                        data-aos="zoom-in" data-aos-delay="320">
+                        <span class="m-tile-mask"></span>
+                        <span class="m-tile-text">
+                            <strong>绿系统</strong>
+                            <em>绿化种植与景观</em>
+                        </span>
+                    </a>
+                    <a class="m-tile" href="#other-engineering" style="background-image:url('./images/zz.jpg')"
+                        data-aos="zoom-in" data-aos-delay="400">
+                        <span class="m-tile-mask"></span>
+                        <span class="m-tile-text">
+                            <strong>其他工程</strong>
+                            <em>围墙大门、消防、热力</em>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 各分类概览区：全屏视差 + 黄金位置叠加文案 -->
+        <section class="m-parallax" id="water-system">
+            <div class="parallax-bg" style="background-image:url('./images/1.jpg')"></div>
+            <div class="container golden-overlay pos-left" data-aos="fade-up">
+                <div class="panel">
+                    <h2>水系统</h2>
+                    <p>给水与排水排污一体化实施：入户接驳、计量与雨污分流改造，泵房及井类设施标准化施工。</p>
+                    <a class="btn btn-primary" href="water.html">了解更多</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-parallax" id="electrical-system">
+            <div class="parallax-bg" style="background-image:url('./images/2.jpg')"></div>
+            <div class="container golden-overlay pos-right" data-aos="fade-up">
+                <div class="panel">
+                    <h2>电系统</h2>
+                    <p>强弱电协同：配电与照明、防雷与接地、综合布线与多媒体，兼顾安全与能效。</p>
+                    <a class="btn btn-primary" href="index.html#diagnosis-tool">获取初步方案</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-parallax" id="road-system">
+            <div class="parallax-bg" style="background-image:url('./images/3.jpg')"></div>
+            <div class="container golden-overlay pos-left" data-aos="fade-up">
+                <div class="panel">
+                    <h2>路系统</h2>
+                    <p>道路与场地硬化、步道与照明、交安与附属设施，整体化提升通达性与安全性。</p>
+                    <a class="btn btn-primary" href="index.html#diagnosis-tool">获取初步方案</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-parallax" id="gas-system">
+            <div class="parallax-bg" style="background-image:url('./images/4.jpg')"></div>
+            <div class="container golden-overlay pos-right" data-aos="fade-up">
+                <div class="panel">
+                    <h2>气系统</h2>
+                    <p>燃气接驳、调压与检测，安全隔离与计量管理，满足各类场景的稳定供气需求。</p>
+                    <a class="btn btn-primary" href="index.html#diagnosis-tool">获取初步方案</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-parallax" id="greening-system">
+            <div class="parallax-bg" style="background-image:url('./images/2.jpg')"></div>
+            <div class="container golden-overlay pos-left" data-aos="fade-up">
+                <div class="panel">
+                    <h2>绿系统</h2>
+                    <p>绿化种植与灌溉、景观小品与休闲空间，系统衔接道路与给排水，打造宜居环境。</p>
+                    <a class="btn btn-primary" href="index.html#diagnosis-tool">获取初步方案</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-parallax" id="other-engineering">
+            <div class="parallax-bg" style="background-image:url('./images/zz.jpg')"></div>
+            <div class="container golden-overlay pos-right" data-aos="fade-up">
+                <div class="panel">
+                    <h2>其他工程</h2>
+                    <p>围墙与大门、门禁监控、消防与热力工程，以及综合管廊等跨专业协同实施。</p>
+                    <a class="btn btn-primary" href="index.html#diagnosis-tool">获取初步方案</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 行动区 -->
+        <section class="m-cta">
+            <div class="container m-cta-inner">
+                <div class="m-cta-text" data-aos="fade-right">
+                    <h3>需要一个整体解决方案？</h3>
+                    <p>联系我们，获得初步诊断与工期/预算建议。</p>
+                </div>
+                <div class="m-cta-actions" data-aos="fade-left">
+                    <a class="btn btn-primary" href="index.html#diagnosis-tool"><i class="fas fa-cogs"></i> 获取智能诊断</a>
+                    <a class="btn btn-outline" href="index.html#contact"><i class="fas fa-envelope"></i> 联系我们</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 统一页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="images/logo.png" alt="中泓万城" class="footer-logo" />
+                        <h3>中泓万城</h3>
+                        <p>市政施工与城市更新整体解决方案提供商</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>核心业务</h4>
+                    <ul>
+                        <li><a href="municipal.html">市政施工</a></li>
+                        <li><a href="index.html#urban-renewal">城市更新和运营</a></li>
+                        <li><a href="index.html#design-visualization">设计可视化</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>经典案例</h4>
+                    <ul>
+                        <li><a href="index.html#case-library">案例库</a></li>
+                        <li><a href="index.html#cases">轮播精选</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <div class="contact-item"><i class="fas fa-phone"></i><span>400-400-4000</span></div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i><span>info@zhongwancheng.com</span></div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>北京市朝阳区XXX大厦</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 中泓万城. 保留所有权利. | 京ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

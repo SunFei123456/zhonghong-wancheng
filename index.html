@@ -1,426 +1,370 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>中泓万城 - 文化空间整体解决方案提供商</title>
-    <meta
-      name="description"
-      content="专注数字展厅、博物馆、党史馆等文化空间建设，提供设计-施工-运营全链条服务"
-    />
 
-    <!-- 外部组件CDN -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>中泓万城 - 市政施工与城市更新整体解决方案提供商</title>
+  <meta name="description" content="专注市政施工、城市更新运营、数字展厅等综合服务，提供水电气路绿排全链条工程解决方案" />
 
-    <!-- 自定义样式 -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/about.css" />
-    <link rel="stylesheet" href="./css/cultural-space.css" />
-    <link rel="stylesheet" href="./css/cases.css" />
-    <link rel="stylesheet" href="./css/qualifications.css" />
-    <link rel="stylesheet" href="./css/contact.css">
-  </head>
-  <body>
-    <!-- 导航栏 -->
-    <header class="navbar" id="navbar">
-      <!-- 导航栏上部分 -->
-      <div class="navbar-top">
-        <div class="container">
-          <div class="nav-brand">
-            <img src="images/logo.png" alt="中泓万城" class="logo" />
-            <span class="brand-text">中泓万城</span>
+  <!-- 外部组件CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- 自定义样式 -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/home.css" />
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <header class="navbar" id="navbar">
+    <!-- 导航栏上部分 -->
+    <div class="navbar-top">
+      <div class="container">
+        <div class="nav-brand">
+          <img src="images/logo.png" alt="中泓万城" class="logo" />
+          <span class="brand-text">中泓万城</span>
+        </div>
+        <div class="nav-top-right">
+          <div class="contact-phone">
+            <i class="fas fa-phone"></i>
+            <span>400-400-4000</span>
           </div>
-          <div class="nav-top-right">
-            <div class="contact-phone">
-              <i class="fas fa-phone"></i>
-              <span>400-400-4000</span>
-            </div>
-            <div class="search-box">
-              <input type="text" class="search-input" placeholder="搜索..." />
-              <button class="search-btn">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
+          <div class="search-box">
+            <input type="text" class="search-input" placeholder="搜索..." />
+            <button class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- 导航栏下部分 -->
-      <div class="navbar-bottom">
-        <div class="container">
-          <nav class="nav-menu" id="nav-menu">
-            <div class="nav-item">
-              <a href="#home" class="nav-link">首页</a>
-            </div>
-            <div class="nav-item">
-              <a href="#digital-exhibition" class="nav-link">
-                数字展馆
-                <i class="fas fa-chevron-down dropdown-arrow"></i>
-              </a>
-              <div class="dropdown-menu">
-                <a href="#city" class="dropdown-item">城市</a>
-                <a href="#enterprise" class="dropdown-item">企业</a>
-                <a href="#museum" class="dropdown-item">博物</a>
-                <a href="#theme" class="dropdown-item">主题</a>
-                <a href="#commercial" class="dropdown-item">商业展示</a>
-                <a href="#special-town" class="dropdown-item"
-                  >特色小镇/产业园</a
-                >
-                <a href="#cultural-tourism" class="dropdown-item">特色文旅</a>
-              </div>
-            </div>
-            <div class="nav-item">
-              <a href="#design-visualization" class="nav-link">
-                设计可视化
-                <i class="fas fa-chevron-down dropdown-arrow"></i>
-              </a>
-              <div class="dropdown-menu">
-                <a href="#architectural-design" class="dropdown-item"
-                  >建筑设计图</a
-                >
-                <a href="#architectural-animation" class="dropdown-item"
-                  >建筑动画/多媒体</a
-                >
-              </div>
-            </div>
-          </nav>
-          <div class="nav-toggle" id="nav-toggle">
-            <i class="fas fa-bars"></i>
+    <!-- 导航栏下部分 -->
+    <div class="navbar-bottom">
+      <div class="container">
+        <nav class="nav-menu" id="nav-menu">
+          <div class="nav-item">
+            <a href="#home" class="nav-link">首页</a>
           </div>
+          <div class="nav-item">
+            <a href="municipal.html" class="nav-link">
+              市政施工
+              <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="water.html" class="dropdown-item">水系统</a>
+              <a href="municipal.html#electrical-system" class="dropdown-item">电系统</a>
+              <a href="municipal.html#road-system" class="dropdown-item">路系统</a>
+              <a href="municipal.html#gas-system" class="dropdown-item">气系统</a>
+              <a href="municipal.html#greening-system" class="dropdown-item">绿系统</a>
+              <a href="municipal.html#other-engineering" class="dropdown-item">其他工程</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="#urban-renewal" class="nav-link">城市更新和运营</a>
+          </div>
+          <div class="nav-item">
+            <a href="#design-visualization" class="nav-link">
+              设计可视化
+              <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#architectural-design" class="dropdown-item">建筑设计图</a>
+              <a href="#architectural-animation" class="dropdown-item">建筑动画/多媒体</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="#about" class="nav-link">公司简介</a>
+          </div>
+          <div class="nav-item">
+            <a href="#contact" class="nav-link">联系我们</a>
+          </div>
+        </nav>
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- 主要内容区 -->
-    <main>
-      <!-- 首页轮播区 -->
-      <section id="home" class="hero-section">
-        <div class="swiper hero-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide hero-slide">
-              <div
-                class="hero-bg"
-                style="
+  <!-- 主要内容区 -->
+  <main>
+    <!-- 首页轮播区 -->
+    <section id="home" class="hero-section">
+      <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide hero-slide">
+            <div class="hero-bg" style="
                   background-image: url('./images/banner.png');
-                "
-              ></div>
-              <div class="hero-content">
-                <div class="container">
-                  <h1 class="hero-title" data-aos="fade-up">
-                    文化空间整体解决方案
-                  </h1>
-                  <p
-                    class="hero-subtitle"
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                  >
-                    从军史馆到城市规划馆，设计-施工-运营全链条服务
-                  </p>
-                  <div
-                    class="hero-buttons"
-                    data-aos="fade-up"
-                    data-aos-delay="400"
-                  >
-                    <a href="#contact" class="btn btn-primary">
-                      <i class="fas fa-calculator"></i>
-                      智能需求诊断
-                    </a>
-                    <a href="#cases" class="btn btn-outline">
-                      <i class="fas fa-play"></i>
-                      观看案例视频
-                    </a>
-                  </div>
+                "></div>
+            <div class="hero-content">
+              <div class="container">
+                <h1 class="hero-title" data-aos="fade-up">
+                  市政施工与城市更新整体解决方案
+                </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                  水电路气绿排 · 设计-施工-运营全链条服务
+                </p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                  <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-calculator"></i>
+                    智能需求诊断
+                  </a>
+                  <a href="#cases" class="btn btn-outline">
+                    <i class="fas fa-play"></i>
+                    观看案例视频
+                  </a>
                 </div>
               </div>
-              <div class="digital-overlay">
+            </div>
+            <div class="digital-overlay">
+              <div class="qualification-badge">
+                <i class="fas fa-certificate"></i>
+                <span>装饰装修二级资质</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide hero-slide">
+            <div class="hero-bg" style="
+                  background-image: url('./images/banner1.jpg');
+                "></div>
+            <div class="hero-content">
+              <div class="container">
+                <h1 class="hero-title" data-aos="fade-up">
+                  全链条工程服务能力
+                </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                  装修·机电安装·市政公用，从设计到施工的专业保障
+                </p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                  <a href="#engineering" class="btn btn-primary">
+                    <i class="fas fa-tools"></i>
+                    查看工程案例
+                  </a>
+                  <a href="#qualification" class="btn btn-outline">
+                    <i class="fas fa-award"></i>
+                    资质认证
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="digital-overlay">
+              <div class="qualification-badges">
                 <div class="qualification-badge">
                   <i class="fas fa-certificate"></i>
-                  <span>装饰装修二级资质</span>
+                  <span>市政公用工程三级</span>
                 </div>
-              </div>
-            </div>
-            <div class="swiper-slide hero-slide">
-              <div
-                class="hero-bg"
-                style="
-                  background-image: url('./images/banner1.jpg');
-                "
-              ></div>
-              <div class="hero-content">
-                <div class="container">
-                  <h1 class="hero-title" data-aos="fade-up">
-                    全链条工程服务能力
-                  </h1>
-                  <p
-                    class="hero-subtitle"
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                  >
-                    装修·机电安装·市政公用，从设计到施工的专业保障
-                  </p>
-                  <div
-                    class="hero-buttons"
-                    data-aos="fade-up"
-                    data-aos-delay="400"
-                  >
-                    <a href="#engineering" class="btn btn-primary">
-                      <i class="fas fa-tools"></i>
-                      查看工程案例
-                    </a>
-                    <a href="#qualification" class="btn btn-outline">
-                      <i class="fas fa-award"></i>
-                      资质认证
-                    </a>
-                  </div>
+                <div class="qualification-badge">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>安全生产许可证</span>
                 </div>
-              </div>
-              <div class="digital-overlay">
-                <div class="qualification-badges">
-                  <div class="qualification-badge">
-                    <i class="fas fa-certificate"></i>
-                    <span>市政公用工程三级</span>
-                  </div>
-                  <div class="qualification-badge">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>安全生产许可证</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </section>
-
-      <!-- 关于我们部分 -->
-      <section id="about" class="about-section">
-        <div class="container about-container">
-          <div class="about-left" data-aos="fade-right">
-            <h2 class="about-title">数字展馆卓越品牌</h2>
-            <p class="about-desc">
-              总体设计、3D数字内容制作、软件开发、系统集成等数字展馆一体化服务
-            </p>
-
-            <div class="about-stats">
-              <div class="stat-item">
-                <div class="stat-number">9999+</div>
-                <div class="stat-label">创意团队</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">9<span>年</span></div>
-                <div class="stat-label">行业经验</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">99+</div>
-                <div class="stat-label">创意中心</div>
-              </div>
-            </div>
-
-            <a href="#" class="btn btn-gradient about-cta">了解中泓</a>
-          </div>
-
-          <div class="about-right" data-aos="fade-left">
-            <div class="about-image-wrap">
-              <img src="images/banner1.jpg" alt="展示图" class="about-image" />
-              <div class="play-circle">
-                <i class="fas fa-play"></i>
               </div>
             </div>
           </div>
         </div>
-      </section>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
 
-      <!-- 文化空间建设 强化视觉冲击力。-->
+    <!-- 关于我们部分 -->
+    <section id="about" class="about-section">
+      <div class="container about-container">
+        <div class="about-left" data-aos="fade-right">
+          <h2 class="about-title">市政施工与城市更新专业服务商</h2>
+          <p class="about-desc">
+            专注市政施工、城市更新运营、数字展厅，提供水电路气绿排全链条工程解决方案
+          </p>
 
-      <section id="cultural-space" class="cases-section">
-        <div class="cases-top">
-          <h2 class="cases-title">打造展馆新标杆 引领数字文化新体验</h2>
-          <div class="cases-filters">
-            <button class="pill active">博物馆</button>
-            <button class="pill">城市馆</button>
-            <button class="pill">企业馆</button>
-          </div>
-        </div>
-
-        <div class="cases-carousel">
-          <button class="cases-arrow left">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <div class="cases-track">
-            <div class="case-card">
-              <img src="images/banner1.jpg" alt="案例1" />
-              <div class="case-caption">伊之密全球创新中心展厅</div>
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-number">9999+</div>
+              <div class="stat-label">创意团队</div>
             </div>
-            <div class="case-card">
-              <img src="images/banner.png" alt="案例2" />
-              <div class="case-caption">城市规划馆沉浸式展示</div>
+            <div class="stat-item">
+              <div class="stat-number">9<span>年</span></div>
+              <div class="stat-label">行业经验</div>
             </div>
-            <div class="case-card">
-              <img src="images/banner1.jpg" alt="案例3" />
-              <div class="case-caption">企业品牌馆交互体验</div>
+            <div class="stat-item">
+              <div class="stat-number">99+</div>
+              <div class="stat-label">创意中心</div>
             </div>
           </div>
-          <button class="cases-arrow right">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+
+          <a href="#" class="btn btn-gradient about-cta">了解中泓</a>
         </div>
-      </section>
 
-      <!-- 案例库模块 -->
-      <section id="case-library" class="cases-library">
-        <div class="container">
-          <div class="section-header">
-            <h2>案例库建设 — 完整交付示例</h2>
-            <p class="muted">
-              精选 4 个典型项目，展示从设计到施工、到数字化展示的全流程能力。
-            </p>
-          </div>
-
-          <div class="cases-grid">
-            <article class="case-item">
-              <div class="case-media">
-                <img
-                  src="./images/1.jpg"
-                  alt="军史馆案例"
-                />
-                <div class="case-overlay">
-                  <div class="case-meta">
-                    <span class="tag">博物馆</span>
-                    <h3>某部队军史馆</h3>
-                    <p class="short">
-                      集图文陈列、互动多媒体、沉浸式体验于一体，项目周期 6
-                      个月。
-                    </p>
-                  </div>
-                  <a class="case-cta" href="#">查看详情</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="case-item">
-              <div class="case-media">
-                <img
-                  src="./images/4.jpg"
-                  alt="城市规划馆案例"
-                />
-                <div class="case-overlay">
-                  <div class="case-meta">
-                    <span class="tag">城市馆</span>
-                    <h3>开发区城市规划馆</h3>
-                    <p class="short">
-                      结合 3D 城市沙盘与数据可视化，支持触控与 AR 导览。
-                    </p>
-                  </div>
-                  <a class="case-cta" href="#">查看详情</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="case-item">
-              <div class="case-media">
-                <img
-                  src="./images/3.jpg"
-                  alt="企业馆案例"
-                />
-                <div class="case-overlay">
-                  <div class="case-meta">
-                    <span class="tag">企业馆</span>
-                    <h3>企业品牌馆</h3>
-                    <p class="short">
-                      品牌故事化叙事与互动展示相结合，包含产品演示与视频资料库。
-                    </p>
-                  </div>
-                  <a class="case-cta" href="#">查看详情</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="case-item">
-              <div class="case-media">
-                <img
-                  src="./images/2.jpg"
-                  alt="文旅展区案例"
-                />
-                <div class="case-overlay">
-                  <div class="case-meta">
-                    <span class="tag">文旅</span>
-                    <h3>特色文旅展区</h3>
-                    <p class="short">
-                      依托地方文化资源打造主题沉浸式展览，支持巡展与常设两种运营模式。
-                    </p>
-                  </div>
-                  <a class="case-cta" href="#">查看详情</a>
-                </div>
-              </div>
-            </article>
+        <div class="about-right" data-aos="fade-left">
+          <div class="about-image-wrap">
+            <img src="images/banner1.jpg" alt="展示图" class="about-image" />
+            <div class="play-circle">
+              <i class="fas fa-play"></i>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- 资质背书模块（位于案例库模块下方） -->
-      <section
-        id="qualifications"
-        class="qualifications-section"
-        aria-labelledby="qualifications-title"
-      >
-        <div class="container">
-          <div class="qual-header">
-            <h2 id="qualifications-title">资质背书 — 全链条工程与施工能力</h2>
-            <p class="muted">
-              展厅建设涉及装修、机电安装、市政配套等，我们具备完整资质与安全资质保障，保障项目品质与合规交付。
-            </p>
+    <!-- 文化空间建设 强化视觉冲击力。-->
+
+    <section id="cultural-space" class="cases-section">
+      <div class="cases-top">
+        <h2 class="cases-title">城市更新与运营案例精选</h2>
+        <div class="cases-filters">
+          <button class="pill active">市政施工</button>
+          <button class="pill">城市更新</button>
+          <button class="pill">设计可视化</button>
+        </div>
+      </div>
+
+      <div class="cases-carousel">
+        <button class="cases-arrow left">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="cases-track">
+          <div class="case-card">
+            <img src="images/banner1.jpg" alt="案例1" />
+            <div class="case-caption">道路改造与配套提升</div>
           </div>
-
-          <div class="badge-grid" role="list">
-            <article class="qual-card" role="listitem">
-              <div class="content-lis">
-                <h3 class="qual-title">装饰装修工程二级资质</h3>
-                <p class="qual-desc">
-                  具备大型商业及公共空间展厅的室内装饰与装修施工能力，涵盖材料选型与工艺管控。
-                </p>
-              </div>
-            </article>
-
-            <article class="qual-card" role="listitem">
-              <div class="content-lis">
-                <h3 class="qual-title">市政公用工程施工总承包三级</h3>
-                <p class="qual-desc">
-                  负责市政配套、给排水、电力等系统的工程实施与联动施工，支持复杂场地条件施工。
-                </p>
-              </div>
-            </article>
-
-            <article class="qual-card" role="listitem">
-              <div class="content-lis">
-                <h3 class="qual-title">安全生产许可证</h3>
-                <p class="qual-desc">
-                    严格执行安全管理体系与施工安全标准，提供完善的安全责任与应急预案。
-                </p>
-              </div>
-            </article>
-
-            <article class="qual-card" role="listitem">
-              <div class="content-lis">
-                <h3 class="qual-title">机电安装工程专业承包</h3>
-                <p class="qual-desc">
-                  具备机电系统（弱电/强电/空调/排水）安装与调试能力，支持展厅多媒体与智能控制集成。
-                </p>
-              </div>
-            </article>
+          <div class="case-card">
+            <img src="images/banner.png" alt="案例2" />
+            <div class="case-caption">老旧小区综合改造</div>
           </div>
+          <div class="case-card">
+            <img src="images/banner1.jpg" alt="案例3" />
+            <div class="case-caption">园区绿化与景观优化</div>
+          </div>
+        </div>
+        <button class="cases-arrow right">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
 
-          <div class="qual-cta">
-            <!-- <a
+    <!-- 案例库模块 -->
+    <section id="case-library" class="cases-library">
+      <div class="container">
+        <div class="section-header">
+          <h2>市政施工与城市更新 — 案例库</h2>
+          <p class="muted">
+            精选项目，覆盖水电路气绿排、市政配套与城市更新全流程。
+          </p>
+        </div>
+
+        <div class="cases-grid">
+          <article class="case-item">
+            <div class="case-media">
+              <img src="./images/1.jpg" alt="军史馆案例" />
+              <div class="case-overlay">
+                <div class="case-meta">
+                  <span class="tag">市政施工</span>
+                  <h3>市政道路改造项目</h3>
+                  <p class="short">道路硬化、雨污分流及配套设施改造，工期 6 个月。</p>
+                </div>
+                <a class="case-cta" href="#">查看详情</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-item">
+            <div class="case-media">
+              <img src="./images/4.jpg" alt="城市规划馆案例" />
+              <div class="case-overlay">
+                <div class="case-meta">
+                  <span class="tag">城市更新</span>
+                  <h3>老旧小区综合整治</h3>
+                  <p class="short">外立面、管网、景观与公共服务配套升级。</p>
+                </div>
+                <a class="case-cta" href="#">查看详情</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-item">
+            <div class="case-media">
+              <img src="./images/3.jpg" alt="企业馆案例" />
+              <div class="case-overlay">
+                <div class="case-meta">
+                  <span class="tag">机电安装</span>
+                  <h3>机电系统改造</h3>
+                  <p class="short">强弱电、空调与给排水系统联动调试，提升能效。</p>
+                </div>
+                <a class="case-cta" href="#">查看详情</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-item">
+            <div class="case-media">
+              <img src="./images/2.jpg" alt="文旅展区案例" />
+              <div class="case-overlay">
+                <div class="case-meta">
+                  <span class="tag">景观绿化</span>
+                  <h3>园区绿化与景观优化</h3>
+                  <p class="short">绿化种植、休闲步道与景观小品，打造宜居环境。</p>
+                </div>
+                <a class="case-cta" href="#">查看详情</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 资质背书模块（位于案例库模块下方） -->
+    <section id="qualifications" class="qualifications-section" aria-labelledby="qualifications-title">
+      <div class="container">
+        <div class="qual-header">
+          <h2 id="qualifications-title">资质背书 — 全链条工程与施工能力</h2>
+          <p class="muted">
+            覆盖装修工程、机电安装、市政配套与安全生产全链条资质，保障市政施工与城市更新项目的品质与合规交付。
+          </p>
+        </div>
+
+        <div class="badge-grid" role="list">
+          <article class="qual-card" role="listitem">
+            <div class="content-lis">
+              <h3 class="qual-title">装饰装修工程二级资质</h3>
+              <p class="qual-desc">
+                具备大型商业及公共空间展厅的室内装饰与装修施工能力，涵盖材料选型与工艺管控。
+              </p>
+            </div>
+          </article>
+
+          <article class="qual-card" role="listitem">
+            <div class="content-lis">
+              <h3 class="qual-title">市政公用工程施工总承包三级</h3>
+              <p class="qual-desc">
+                负责市政配套、给排水、电力等系统的工程实施与联动施工，支持复杂场地条件施工。
+              </p>
+            </div>
+          </article>
+
+          <article class="qual-card" role="listitem">
+            <div class="content-lis">
+              <h3 class="qual-title">安全生产许可证</h3>
+              <p class="qual-desc">
+                严格执行安全管理体系与施工安全标准，提供完善的安全责任与应急预案。
+              </p>
+            </div>
+          </article>
+
+          <article class="qual-card" role="listitem">
+            <div class="content-lis">
+              <h3 class="qual-title">机电安装工程专业承包</h3>
+              <p class="qual-desc">
+                具备机电系统（弱电/强电/空调/排水）安装与调试能力，支持展厅多媒体与智能控制集成。
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="qual-cta">
+          <!-- <a
               class="btn btn-primary"
               href="#contact"
               aria-label="联系我们了解资质与服务"
@@ -432,107 +376,107 @@
               aria-label="下载资质证明（示例）"
               >下载资质证明（示例）</a
             > -->
-          </div>
-        </div>
-      </section>
-    <!-- 需求诊断工具 -->
-      <section id="diagnosis-tool" class="diagnosis-section">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="diagnosis-title">需求诊断工具</h2>
-            <p class="muted">
-              三步获取展厅建设方案
-            </p>
-          </div>
-          <form id="diagnosis-form" class="diagnosis-form" data-aos="fade-up">
-            <div class="form-group">
-              <label for="hall-type">展厅类型</label>
-              <div class="select-wrapper">
-                <select id="hall-type" name="hall-type">
-                  <option value="government">政府</option>
-                  <option value="enterprise">企业</option>
-                  <option value="cultural-tourism">文旅</option>
-                </select>
-                <i class="fas fa-chevron-down"></i>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="area">面积 (m²)</label>
-              <input type="number" id="area" name="area" placeholder="请输入展厅面积" required />
-            </div>
-            <div class="form-group">
-              <label for="budget">预算 (万元)</label>
-              <input type="number" id="budget" name="budget" placeholder="请输入项目预算" required />
-            </div>
-            <div class="form-group form-submit">
-              <button type="submit" class="btn btn-primary">
-                <i class="fas fa-cogs"></i>
-                获取智能诊断
-              </button>
-            </div>
-          </form>
-          <div id="ai-response" class="ai-response"></div>
-        </div>
-      </section>
-    </main>
-
-    <!-- 页脚 -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <div class="footer-brand">
-              <img src="images/logo.png" alt="中泓万城" class="footer-logo" />
-              <h3>中泓万城</h3>
-              <p>文化空间整体解决方案提供商</p>
-            </div>
-          </div>
-          <div class="footer-section">
-            <h4>核心业务</h4>
-            <ul>
-              <li><a href="#cultural-space">文化空间建设</a></li>
-              <li><a href="#digital-exhibition">数字展厅</a></li>
-              <li><a href="#military-museum">军史馆建设</a></li>
-              <li><a href="#planning-exhibition">城市规划馆</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>经典案例</h4>
-            <ul>
-              <li><a href="#case1">某部队军史馆</a></li>
-              <li><a href="#case2">某开发区规划馆</a></li>
-              <li><a href="#case3">某军阵营房改造</a></li>
-              <li><a href="#case4">某街道市政工程</a></li>
-              <li><a href="#all-cases">查看更多案例</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>联系我们</h4>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <span>400-400-4000</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>info@zhongwancheng.com</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>北京市朝阳区XXX大厦</span>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 中泓万城. 保留所有权利. | 京ICP备XXXXXXXX号</p>
         </div>
       </div>
-    </footer>
+    </section>
+    <!-- 需求诊断工具 -->
+    <section id="diagnosis-tool" class="diagnosis-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="diagnosis-title">项目需求诊断</h2>
+          <p class="muted">
+            三步获取市政施工/城市更新初步方案
+          </p>
+        </div>
+        <form id="diagnosis-form" class="diagnosis-form" data-aos="fade-up">
+          <div class="form-group">
+            <label for="hall-type">项目类型</label>
+            <div class="select-wrapper">
+              <select id="hall-type" name="hall-type">
+                <option value="municipal">市政施工</option>
+                <option value="urban-renewal">城市更新</option>
+                <option value="mep">机电安装</option>
+              </select>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="area">面积 (m²)</label>
+            <input type="number" id="area" name="area" placeholder="请输入项目面积" required />
+          </div>
+          <div class="form-group">
+            <label for="budget">预算 (万元)</label>
+            <input type="number" id="budget" name="budget" placeholder="请输入预算区间" required />
+          </div>
+          <div class="form-group form-submit">
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-cogs"></i>
+              获取智能诊断
+            </button>
+          </div>
+        </form>
+        <div id="ai-response" class="ai-response"></div>
+      </div>
+    </section>
+  </main>
 
-    <!-- 外部脚本 -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="中泓万城" class="footer-logo" />
+            <h3>中泓万城</h3>
+            <p>市政施工与城市更新整体解决方案提供商</p>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>核心业务</h4>
+          <ul>
+            <li><a href="municipal.html">市政施工</a></li>
+            <li><a href="#urban-renewal">城市更新和运营</a></li>
+            <li><a href="#design-visualization">设计可视化</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>经典案例</h4>
+          <ul>
+            <li><a href="#case1">某部队军史馆</a></li>
+            <li><a href="#case2">某开发区规划馆</a></li>
+            <li><a href="#case3">某军阵营房改造</a></li>
+            <li><a href="#case4">某街道市政工程</a></li>
+            <li><a href="#all-cases">查看更多案例</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>联系我们</h4>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>400-400-4000</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@zhongwancheng.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>北京市朝阳区XXX大厦</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 中泓万城. 保留所有权利. | 京ICP备XXXXXXXX号</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- 自定义脚本 -->
-    <script src="script.js"></script>
-  </body>
+  <!-- 外部脚本 -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- 自定义脚本 -->
+  <script src="script.js"></script>
+</body>
+
 </html>
