@@ -53,7 +53,7 @@
 
 /* 介绍 */
 .ad-intro{
-  padding: 10rem 0;
+  padding: 5rem 0;
   background: #ffffff;
 }
 .ad-intro-grid{
@@ -137,12 +137,12 @@
 
 /* 作品展示 */
 .ad-gallery{
-  padding: 10rem 0;
+  padding:5rem 0;
   background: #ffffff;
 }
 .ad-gallery-grid{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
 }
 .ad-gallery-item{
@@ -174,11 +174,16 @@
   padding: 2rem;
   background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.9) 100%);
   color: #ffffff;
-  transform: translateY(100%);
-  transition: transform 0.4s ease;
-}
-.ad-gallery-item:hover .ad-gallery-info{
   transform: translateY(0);
+  transition: all 0.4s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.ad-gallery-info-text{
+  flex: 1;
 }
 .ad-gallery-info h4{
   font-size: 1.4rem;
@@ -187,6 +192,26 @@
 .ad-gallery-info p{
   font-size: 1rem;
   opacity: 0.9;
+}
+.ad-gallery-btn{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+.ad-gallery-btn:hover{
+  background: #ffffff;
+  color: #d12b26;
+  transform: scale(1.1);
 }
 
 /* CTA */
