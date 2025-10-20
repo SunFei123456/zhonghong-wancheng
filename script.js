@@ -270,42 +270,6 @@ document.querySelectorAll('.case-item').forEach(item => {
     });
 });
 
-// Appended by Gemini for the diagnosis tool
-document.addEventListener('DOMContentLoaded', function () {
-    // 需求诊断工具交互
-    const diagnosisForm = document.getElementById('diagnosis-form');
-    const aiResponseDiv = document.getElementById('ai-response');
-
-    if (diagnosisForm) {
-        diagnosisForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const hallType = document.getElementById('hall-type').value;
-            const area = document.getElementById('area').value;
-            const budget = document.getElementById('budget').value;
-
-            if (!area || !budget) {
-                aiResponseDiv.innerHTML = '<p style="color: #C91F37;"><strong>错误：</strong> 请填写面积和预算以获取诊断。</p>';
-                aiResponseDiv.style.display = 'block';
-                return;
-            }
-
-            // 模拟AI响应
-            aiResponseDiv.style.display = 'block';
-            aiResponseDiv.innerHTML = '<p><strong>正在分析您的需求...</strong></p>';
-
-            setTimeout(() => {
-                let responseText = none;
-                aiResponseDiv.innerHTML = responseText;
-
-                // 滚动到响应位置
-                aiResponseDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-            }, 1500); // 模拟AI思考时间
-        });
-    }
-});
-
 // ===== 水系统页 - 横向手风琴效果（支持拖拽滑动） =====
 (function () {
     const accordion = document.querySelector('.w-accordion');
@@ -381,6 +345,67 @@ document.addEventListener('DOMContentLoaded', function () {
         const x = e.touches[0].pageX - accordion.offsetLeft;
         const walk = (x - startX) * 2;
         accordion.scrollLeft = scrollLeft - walk;
+    });
+})();
+
+// 首页案例轮播筛选功能
+(function () {
+    const filterBtns = document.querySelectorAll('.cases-filters .pill');
+    const caseCards = document.querySelectorAll('.case-card[data-category]');
+
+    if (filterBtns.length === 0 || caseCards.length === 0) return;
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            // 移除所有active类
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // 添加active到当前按钮
+            this.classList.add('active');
+
+            const filter = this.getAttribute('data-filter');
+
+            // 筛选卡片
+            caseCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.style.display = 'block';
+                    // 添加淡入动画
+                    card.style.animation = 'fadeIn 0.5s ease-in-out';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // 重新初始化轮播位置
+            const track = document.querySelector('.cases-track');
+            if (track) {
+                track.scrollLeft = 0;
+            }
+        });
+    });
+})();
+
+// 返回顶部按钮功能
+(function () {
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    if (!backToTopBtn) return;
+
+    // 滚动时显示/隐藏按钮
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    // 点击返回顶部
+    backToTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 })();
 
