@@ -41,21 +41,6 @@
 .m-cta-text p{ color: #6b7280; margin-top: 0.25rem; }
 .m-cta-actions{ display: flex; gap: 0.8rem; }
 
-/* 全屏视差分节 */
-.m-parallax{ position: relative; height: 100vh; min-height: 520px; overflow: hidden; color: #ffffff; }
-.m-parallax .parallax-bg{ position: absolute; inset: 0; background-size: cover; background-position: center; will-change: transform; transform: translateZ(0) scale(1.03); }
-.m-parallax:after{ content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.12) 40%, rgba(0,0,0,0.35) 100%); pointer-events: none; }
-.golden-overlay{ position: relative; z-index: 2; height: 100%; display: flex; }
-.golden-overlay.pos-left{ justify-content: flex-start; }
-.golden-overlay.pos-right{ justify-content: flex-end; }
-.golden-overlay .panel{ align-self: center; /* 黄金比例偏移：距顶部约 38% */ margin-top: calc(100vh * 0.38 - 20vh);  padding: 1.2rem 1.4rem; max-width: 560px;  transform: translateY(10px); opacity: 0.98; }
-.golden-overlay .panel h2{ font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: 0.3px; text-shadow: 0 6px 24px rgba(0,0,0,0.35); }
-.golden-overlay .panel p{ color: #e6e8ee; margin-bottom: 0.9rem; line-height: 1.6; text-shadow: 0 2px 12px rgba(0,0,0,0.28); }
-.golden-overlay .panel .btn{ box-shadow: 0 10px 24px rgba(201,31,55,0.25); }
-.golden-overlay .panel:hover{ transform: translateY(6px); transition: transform 0.35s ease; }
-
-/* 轻微交互动画：背景视差 */
-.m-parallax .parallax-bg.is-parallaxing{ transition: transform 0.08s linear; }
 
 @media (max-width: 1100px){
   .m-sections-grid{ grid-template-columns: repeat(2, 1fr); }
@@ -69,8 +54,6 @@
   .m-block-inner{ grid-template-columns: 1fr; }
   .m-media img{ height: 220px; }
   .m-cta-inner{ flex-direction: column; text-align: center; }
-  .m-parallax{ min-height: 440px; }
-  .golden-overlay .panel{ margin-top: calc(100vh * 0.34 - 18vh); padding: 1rem 1.1rem; }
 }
 
 /* 当磁贴入口置于总体描述区内时，弱化背景并压缩间距 */
