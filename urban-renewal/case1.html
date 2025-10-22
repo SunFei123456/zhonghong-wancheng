@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例详情 - 文化遗产保护 | 中鸿万城</title>
+    <link rel="stylesheet" href="./style/slider.css">
+    <style>
+        /* 自定义图片背景 - 文化遗产保护 */
+        .example-slider .fnc-slide-1 .fnc-slide__inner,
+        .example-slider .fnc-slide-1 .fnc-slide__mask-inner {
+            background-image: url('../images/banner1.jpg');
+        }
+
+        .example-slider .fnc-slide-2 .fnc-slide__inner,
+        .example-slider .fnc-slide-2 .fnc-slide__mask-inner {
+            background-image: url('../images/home/j1.jpg');
+        }
+
+        .example-slider .fnc-slide-3 .fnc-slide__inner,
+        .example-slider .fnc-slide-3 .fnc-slide__mask-inner {
+            background-image: url('../images/home/j2.jpg');
+        }
+
+        .example-slider .fnc-slide-4 .fnc-slide__inner,
+        .example-slider .fnc-slide-4 .fnc-slide__mask-inner {
+            background-image: url('../images/home/j3.jpg');
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .fnc-slide__heading-line {
+                font-size: 60px !important;
+            }
+
+            .fnc-slide__content {
+                left: 10% !important;
+                top: 30% !important;
+            }
+
+            .fnc-slide__action-btn {
+                margin-left: 100px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .fnc-slide__heading-line {
+                font-size: 40px !important;
+            }
+
+            .fnc-slide__action-btn {
+                margin-left: 50px !important;
+                font-size: 16px !important;
+            }
+
+            .fnc-nav__control {
+                width: 80px !important;
+                height: 40px !important;
+                font-size: 12px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo-cont">
+        <!-- 返回按钮 -->
+        <a href="../urban-renewal.html" class="back-button" title="返回上一页">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <span>返回</span>
+        </a>
+
+        <!-- slider start -->
+        <div class="fnc-slider example-slider">
+            <div class="fnc-slider__slides">
+                <!-- slide 1 -->
+                <div class="fnc-slide m--blend-green m--active-slide">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <h2 class="fnc-slide__heading">
+                                <div class="fnc-slide__heading-line">
+                                    <span>文化</span>
+                                </div>
+                                <div class="fnc-slide__heading-line">
+                                    <span>业态植入</span>
+                                </div>
+                            </h2>
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide 2 -->
+                <div class="fnc-slide m--blend-dark">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <h2 class="fnc-slide__heading">
+                                <div class="fnc-slide__heading-line">
+                                    <span>遗产</span>
+                                </div>
+                                <div class="fnc-slide__heading-line">
+                                    <span>活化利用</span>
+                                </div>
+                            </h2>
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide 3 -->
+                <div class="fnc-slide m--blend-red">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <h2 class="fnc-slide__heading">
+                                <div class="fnc-slide__heading-line">
+                                    <span>传统</span>
+                                </div>
+                                <div class="fnc-slide__heading-line">
+                                    <span>村落保护</span>
+                                </div>
+                            </h2>
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide 4 -->
+                <div class="fnc-slide m--blend-blue">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <h2 class="fnc-slide__heading">
+                                <div class="fnc-slide__heading-line">
+                                    <span>文化</span>
+                                </div>
+                                <div class="fnc-slide__heading-line">
+                                    <span>传承创新</span>
+                                </div>
+                            </h2>
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="fnc-nav">
+                <div class="fnc-nav__bgs">
+                    <div class="fnc-nav__bg m--navbg-green m--active-nav-bg"></div>
+                    <div class="fnc-nav__bg m--navbg-dark"></div>
+                    <div class="fnc-nav__bg m--navbg-red"></div>
+                    <div class="fnc-nav__bg m--navbg-blue"></div>
+                </div>
+                <div class="fnc-nav__controls">
+                    <button class="fnc-nav__control">
+                        业态植入
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                    <button class="fnc-nav__control">
+                        活化利用
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                    <button class="fnc-nav__control">
+                        村落保护
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                    <button class="fnc-nav__control">
+                        传承创新
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <!-- slider end -->
+
+        <!-- Credits 详情面板 -->
+        <div class="demo-cont__credits">
+            <div class="demo-cont__credits-close"></div>
+            <h2 class="demo-cont__credits-heading">项目详情</h2>
+            <h3 class="demo-cont__credits-name">文化遗产保护案例</h3>
+
+            <div class="demo-cont__credits-section">
+                <h4>项目概况</h4>
+                <p>本项目聚焦历史文化街区和传统村落保护，在传承历史文脉的基础上，通过创新手法激活文化遗产的当代价值，实现保护与发展的有机统一。</p>
+            </div>
+
+            <div class="demo-cont__credits-section">
+                <h4>保护策略</h4>
+                <ul>
+                    <li>历史建筑修缮：采用传统工艺，修旧如旧，延续历史风貌</li>
+                    <li>文化业态植入：引入文创、艺术等新业态，赋予空间新功能</li>
+                    <li>传统村落保护：保护乡村文化遗产，传承民俗传统</li>
+                    <li>遗产活化利用：合理利用历史空间，融入当代生活</li>
+                </ul>
+            </div>
+
+            <div class="demo-cont__credits-section">
+                <h4>项目成果</h4>
+                <p>通过系统性保护和活化，历史街区重焕生机，文化遗产得到有效传承，成为城市文化记忆的重要载体，获得社会各界高度认可。</p>
+            </div>
+
+            <div class="demo-cont__credits-section">
+                <h4>获奖荣誉</h4>
+                <ul>
+                    <li>2024年度文化遗产保护优秀项目奖</li>
+                    <li>历史文化街区保护示范工程</li>
+                    <li>传统村落保护与活化典范</li>
+                    <li>最佳文化传承创新项目</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/slider.js"></script>
+    <script>
+        // Credits 面板交互
+        var $demoCont = document.querySelector(".demo-cont");
+
+        [].slice.call(document.querySelectorAll(".fnc-slide__action-btn")).forEach(function ($btn) {
+            $btn.addEventListener("click", function () {
+                $demoCont.classList.toggle("credits-active");
+            });
+        });
+
+        document.querySelector(".demo-cont__credits-close").addEventListener("click", function () {
+            $demoCont.classList.remove("credits-active");
+        });
+    </script>
+</body>
+
+</html>

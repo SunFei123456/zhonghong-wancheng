@@ -376,13 +376,14 @@ main {
 
 .btn-outline {
     background: transparent;
-    color: #FFFFFF;
-    border: 2px solid #FFFFFF;
+    color: #C91F37;
+    border: 2px solid #C91F37;
+    transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
-    background: #FFFFFF;
-    color: #C91F37;
+    background: #C91F37;
+    color: #FFFFFF;
 }
 
 .btn-gradient {
@@ -488,39 +489,6 @@ main {
     text-align: center;
     margin-bottom: 3rem;
 }
-
-/* 面包屑导航（通用） */
-.breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.85rem;
-    margin: 2rem;
-}
-
-.breadcrumb a,
-.breadcrumb a {
-    color: rgba(0, 0, 0, 0.75);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.breadcrumb a:hover,
-.breadcrumb a:hover {
-    color: rgba(0, 0, 0, 1);
-}
-
-.breadcrumb span,
-.breadcrumb span {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.breadcrumb span:last-child,
-.breadcrumb span:last-child {
-    color: rgba(0, 0, 0, 0.9);
-}
-
-
 
 
 

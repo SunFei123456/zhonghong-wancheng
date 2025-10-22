@@ -1,62 +1,266 @@
 /* 市政施工概览页专用样式 */
 
-.m-hero{ position: relative; height: 64vh; min-height: 460px; display: flex; align-items: center; color: #ffffff; overflow: hidden; }
-.m-hero-bg{ position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.65); }
-.m-hero:after{ content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.55) 100%); }
-.m-hero-inner{ position: relative; z-index: 1; }
-.m-hero-title{ font-size: 3.2rem; font-weight: 900; text-shadow: 2px 4px 16px rgba(0,0,0,0.35); letter-spacing: 0.5px; }
-.m-hero-sub{ margin-top: 0.75rem; font-size: 1.15rem; opacity: 0.95; }
-.m-hero-cta{ margin-top: 1.5rem; display: flex; gap: 0.8rem; }
-
-.m-intro{ background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%); padding: 6rem; }
-.m-intro-inner{ display: grid; grid-template-columns: 1.3fr 1fr; gap: 2rem; align-items: center; }
-.m-intro-text h2{ font-size: 2rem; color: #0b2b3a; margin-bottom: 0.75rem; }
-.m-intro-text p{ color: #425466; margin-bottom: 0.6rem; }
-.m-intro-stats{ display: flex; gap: 2rem; justify-content: flex-end; }
-.m-kpi{ background: #ffffff; border: 1px solid #eef1f6; border-radius: 12px; padding: 1rem 1.25rem; text-align: center; min-width: 120px; box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06); }
-.m-kpi .num{ font-size: 1.8rem; color: #d12b26; font-weight: 900; }
-.m-kpi .label{ color: #6b7280; margin-top: 0.25rem; }
-
-.m-sections{ padding: 6rem; background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%); }
-.m-sections-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-.m-tile{ position: relative; display: block; height: 220px; border-radius: 14px; overflow: hidden; text-decoration: none; color: #ffffff; background-size: cover; background-position: center; box-shadow: 0 14px 40px rgba(9,20,40,0.08); transform: translateZ(0); }
-.m-tile-mask{ position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,12,30,0.05) 0%, rgba(6,12,30,0.55) 100%); transition: opacity 0.25s ease; }
-.m-tile-text{ position: absolute; left: 14px; bottom: 12px; display: flex; flex-direction: column; gap: 4px; }
-.m-tile-text strong{ font-size: 1.2rem; letter-spacing: 0.3px; }
-.m-tile-text em{ font-style: normal; font-size: 0.9rem; opacity: 0.9; }
-.m-tile:hover .m-tile-mask{ opacity: 0.75; }
-.m-tile:hover{ box-shadow: 0 20px 60px rgba(9,20,40,0.14); transform: translateY(-4px); }
-
-.m-block{ padding: 3.8rem 0; background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%); }
-.m-block.alt{ background: linear-gradient(180deg, #f7f9ff 0%, #ffffff 100%); }
-.m-block-inner{ display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: center; }
-.m-media img{ width: 100%; height: 360px; object-fit: cover; border-radius: 14px; box-shadow: 0 14px 40px rgba(2,6,23,0.1); }
-.m-content h2{ font-size: 1.6rem; color: #07112a; margin-bottom: 0.75rem; }
-.m-content ul{ padding-left: 1rem; color: #425466; }
-.m-content li{ margin-bottom: 0.35rem; }
-
-.m-cta{ padding: 6rem; background: linear-gradient(135deg, #fff5f4, #f5f9ff); }
-.m-cta-inner{ display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.m-cta-text h3{ font-size: 1.6rem; color: #0b2b3a; }
-.m-cta-text p{ color: #6b7280; margin-top: 0.25rem; }
-.m-cta-actions{ display: flex; gap: 0.8rem; }
-
-
-@media (max-width: 1100px){
-  .m-sections-grid{ grid-template-columns: repeat(2, 1fr); }
-  .m-intro-inner{ grid-template-columns: 1fr; }
-  .m-intro-stats{ justify-content: flex-start; }
+.m-hero {
+  position: relative;
+  height: 64vh;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  overflow: hidden;
 }
-@media (max-width: 680px){
-  .m-hero{ height: 46vh; min-height: 320px; }
-  .m-hero-title{ font-size: 2.2rem; }
-  .m-sections-grid{ grid-template-columns: 1fr; }
-  .m-block-inner{ grid-template-columns: 1fr; }
-  .m-media img{ height: 220px; }
-  .m-cta-inner{ flex-direction: column; text-align: center; }
+
+.m-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.75);
+}
+
+.m-hero-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-shadow: 2px 4px 16px rgba(0, 0, 0, 0.35);
+  letter-spacing: 0.5px;
+}
+
+.m-hero-sub {
+  margin-top: 0.75rem;
+  font-size: 1.15rem;
+  opacity: 0.95;
+}
+
+.m-hero-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.m-intro {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+  padding: 6rem;
+}
+
+.m-intro-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.m-intro-text h2 {
+  font-size: 2rem;
+  color: #0b2b3a;
+  margin-bottom: 0.75rem;
+}
+
+.m-intro-text p {
+  color: #425466;
+  margin-bottom: 0.6rem;
+}
+
+.m-intro-stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.m-kpi {
+  background: #ffffff;
+  border: 1px solid #eef1f6;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+}
+
+.m-kpi .num {
+  font-size: 1.8rem;
+  color: #d12b26;
+  font-weight: 900;
+}
+
+.m-kpi .label {
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.m-sections {
+  padding: 6rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%);
+}
+
+.m-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.m-tile {
+  position: relative;
+  display: block;
+  height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 14px 40px rgba(9, 20, 40, 0.08);
+  transform: translateZ(0);
+}
+
+.m-tile-mask {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 12, 30, 0.05) 0%, rgba(6, 12, 30, 0.55) 100%);
+  transition: opacity 0.25s ease;
+}
+
+.m-tile-text {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.m-tile-text strong {
+  font-size: 1.2rem;
+  letter-spacing: 0.3px;
+}
+
+.m-tile-text em {
+  font-style: normal;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.m-tile:hover .m-tile-mask {
+  opacity: 0.75;
+}
+
+.m-tile:hover {
+  box-shadow: 0 20px 60px rgba(9, 20, 40, 0.14);
+  transform: translateY(-4px);
+}
+
+.m-block {
+  padding: 3.8rem 0;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.m-block.alt {
+  background: linear-gradient(180deg, #f7f9ff 0%, #ffffff 100%);
+}
+
+.m-block-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.m-media img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 14px 40px rgba(2, 6, 23, 0.1);
+}
+
+.m-content h2 {
+  font-size: 1.6rem;
+  color: #07112a;
+  margin-bottom: 0.75rem;
+}
+
+.m-content ul {
+  padding-left: 1rem;
+  color: #425466;
+}
+
+.m-content li {
+  margin-bottom: 0.35rem;
+}
+
+.m-cta {
+  padding: 6rem;
+  background: linear-gradient(135deg, #fff5f4, #f5f9ff);
+}
+
+.m-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.m-cta-text h3 {
+  font-size: 1.6rem;
+  color: #0b2b3a;
+}
+
+.m-cta-text p {
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.m-cta-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+
+@media (max-width: 1100px) {
+  .m-sections-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .m-intro-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .m-intro-stats {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 680px) {
+  .m-hero {
+    height: 46vh;
+    min-height: 320px;
+  }
+
+  .m-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .m-sections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .m-block-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .m-media img {
+    height: 220px;
+  }
+
+  .m-cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* 当磁贴入口置于总体描述区内时，弱化背景并压缩间距 */
-.m-intro .m-sections{ padding: 2rem 0 0; background: transparent; }
+.m-intro .m-sections {
+  padding: 2rem 0 0;
+  background: transparent;
+}
 
 /* 移除动画 blob */

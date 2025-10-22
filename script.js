@@ -18,10 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
             el: '.swiper-pagination',
             clickable: true,
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
         effect: 'fade',
         fadeEffect: {
             crossFade: true
@@ -119,56 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     console.log('中泓万城官网初始化完成！');
-
-    // 水系统案例轮播
-    (function () {
-        const track = document.querySelector('.w-cases-track');
-        const slides = Array.from(document.querySelectorAll('.w-cases-slide'));
-        const prevBtn = document.querySelector('.w-cases-arrow.prev');
-        const nextBtn = document.querySelector('.w-cases-arrow.next');
-        const dotsContainer = document.querySelector('.w-cases-dots');
-
-        if (!track || slides.length === 0) return;
-
-        let currentIndex = 0;
-
-        // 创建指示点
-        slides.forEach((_, index) => {
-            const dot = document.createElement('span');
-            dot.className = 'dot';
-            if (index === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(index));
-            dotsContainer.appendChild(dot);
-        });
-
-        const dots = Array.from(dotsContainer.querySelectorAll('.dot'));
-
-        function updateSlide() {
-            slides.forEach((slide, index) => {
-                slide.style.display = index === currentIndex ? 'grid' : 'none';
-            });
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
-            });
-            prevBtn.disabled = currentIndex === 0;
-            nextBtn.disabled = currentIndex === slides.length - 1;
-        }
-
-        function goToSlide(index) {
-            currentIndex = index;
-            updateSlide();
-        }
-
-        prevBtn && prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) goToSlide(currentIndex - 1);
-        });
-
-        nextBtn && nextBtn.addEventListener('click', () => {
-            if (currentIndex < slides.length - 1) goToSlide(currentIndex + 1);
-        });
-
-        updateSlide();
-    })();
 
     // 视差滚动（市政施工分节）
     (function () {
