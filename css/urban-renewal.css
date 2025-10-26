@@ -224,7 +224,7 @@
 .ur-carousel-item {
   width: 200px;
   height: 250px;
-  border-radius: 1rem;
+  border-radius: 8px;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);

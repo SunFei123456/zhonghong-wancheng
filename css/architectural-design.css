@@ -133,7 +133,7 @@
 
 .ad-gallery-item {
   position: relative;
-  border-radius: 20px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(9, 20, 40, 0.08);
   transition: all 0.4s ease;

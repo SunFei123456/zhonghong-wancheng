@@ -55,7 +55,7 @@
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   background-color: #fff;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 /* 联系信息 */
