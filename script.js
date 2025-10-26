@@ -370,3 +370,188 @@ document.querySelectorAll('.case-item').forEach(item => {
     });
 })();
 
+// AI聊天机器人助手
+(function() {
+    const botAssistant = document.getElementById('botAssistant');
+    const chatWindow = document.getElementById('chatWindow');
+    const chatClose = document.getElementById('chatClose');
+    const chatBody = document.getElementById('chatBody');
+    const chatInput = document.getElementById('chatInput');
+    const chatSend = document.getElementById('chatSend');
+    const suggestionBtns = document.querySelectorAll('.suggestion-btn');
+    
+    if (!botAssistant || !chatWindow) return;
+    
+    // AI回复数据库
+    const aiResponses = {
+        '公司主要业务是什么？': '中泓万城是一家综合性工程服务商，主营业务包括：\n\n🏗️ **市政施工**：水电路气绿排全链条工程\n🏙️ **城市更新和运营**：老旧小区改造、商圈更新等\n🎨 **设计可视化**：建筑效果图、动画制作\n\n我们拥有完善的资质体系和专业团队，为您提供一站式解决方案！',
+        
+        '有哪些成功案例？': '我们完成了多个优质项目：\n\n✨ **深圳释放街区酒吧街改造**\n✨ **Mix岛社区商业项目**\n✨ **老旧小区综合改造提升**\n✨ **历史文化街区保护与活化**\n\n累计完成500+项目，客户满意度达98%！想了解具体案例可以访问我们的案例页面。',
+        
+        '如何联系你们？': '📞 **咨询热线**：400-400-4000\n📧 **电子邮箱**：info@zhongwancheng.com\n📍 **公司地址**：北京市朝阳区XXX大厦\n\n工作时间：周一至周五 9:00-18:00\n我们的专业团队会在24小时内与您取得联系！',
+        
+        'default': '感谢您的咨询！🤖\n\n我可以帮您了解：\n• 公司业务介绍\n• 成功案例展示\n• 联系方式查询\n• 项目咨询服务\n\n请选择上方快捷按钮或直接输入您的问题，我会尽力为您解答！'
+    };
+    
+    // 添加入场动画
+    setTimeout(() => {
+        botAssistant.style.opacity = '1';
+        botAssistant.style.transform = 'scale(1)';
+    }, 500);
+    
+    // 打开聊天窗口
+    botAssistant.addEventListener('click', function() {
+        chatWindow.classList.add('active');
+        chatInput.focus();
+    });
+    
+    // 关闭聊天窗口
+    chatClose.addEventListener('click', function() {
+        chatWindow.classList.remove('active');
+    });
+    
+    // 获取当前时间
+    function getCurrentTime() {
+        const now = new Date();
+        return now.getHours().toString().padStart(2, '0') + ':' + 
+               now.getMinutes().toString().padStart(2, '0');
+    }
+    
+    // 添加消息到聊天区域
+    function addMessage(text, isUser = false) {
+        // 移除欢迎消息
+        const welcome = chatBody.querySelector('.chat-welcome');
+        if (welcome) {
+            welcome.remove();
+        }
+        
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chat-message ${isUser ? 'user' : 'bot'}`;
+        
+        const avatarDiv = document.createElement('div');
+        avatarDiv.className = 'message-avatar';
+        
+        if (isUser) {
+            avatarDiv.innerHTML = '<i class="fas fa-user" style="color: #d12b26; font-size: 20px; line-height: 35px;"></i>';
+        } else {
+            avatarDiv.innerHTML = '<img src="./gif/bot.gif" alt="AI" />';
+        }
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'message-content';
+        
+        // 格式化文本：处理换行和Markdown格式
+        let formattedText = text
+            .replace(/\n/g, '<br>') // 换行符转换为<br>
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **粗体**转换
+            .replace(/\*(.*?)\*/g, '<em>$1</em>'); // *斜体*转换
+        
+        contentDiv.innerHTML = formattedText;
+        
+        messageDiv.appendChild(avatarDiv);
+        messageDiv.appendChild(contentDiv);
+        
+        chatBody.appendChild(messageDiv);
+        
+        // 滚动到底部
+        setTimeout(() => {
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }, 100);
+    }
+    
+    // 显示输入中动画
+    function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'chat-message bot typing-indicator';
+        typingDiv.id = 'typingIndicator';
+        
+        typingDiv.innerHTML = `
+            <div class="message-avatar">
+                <img src="./gif/bot.gif" alt="AI" />
+            </div>
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        `;
+        
+        chatBody.appendChild(typingDiv);
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }
+    
+    // 移除输入中动画
+    function removeTypingIndicator() {
+        const typing = document.getElementById('typingIndicator');
+        if (typing) {
+            typing.remove();
+        }
+    }
+    
+    // AI回复
+    function botReply(userMessage) {
+        showTypingIndicator();
+        
+        // 模拟AI思考时间
+        setTimeout(() => {
+            removeTypingIndicator();
+            
+            let response = aiResponses['default'];
+            
+            // 智能匹配回复
+            for (let key in aiResponses) {
+                if (userMessage.includes(key.replace('？', '').replace('?', ''))) {
+                    response = aiResponses[key];
+                    break;
+                }
+            }
+            
+            // 关键词匹配
+            if (userMessage.includes('业务') || userMessage.includes('服务') || userMessage.includes('做什么')) {
+                response = aiResponses['公司主要业务是什么？'];
+            } else if (userMessage.includes('案例') || userMessage.includes('项目')) {
+                response = aiResponses['有哪些成功案例？'];
+            } else if (userMessage.includes('联系') || userMessage.includes('电话') || userMessage.includes('地址')) {
+                response = aiResponses['如何联系你们？'];
+            } else if (userMessage.includes('你好') || userMessage.includes('您好') || userMessage.includes('hi') || userMessage.includes('hello')) {
+                response = '您好！很高兴为您服务！😊\n\n我是中泓万城的AI智能助手，可以帮您了解公司业务、项目案例等信息。请问有什么可以帮到您的吗？';
+            } else if (userMessage.includes('谢谢') || userMessage.includes('感谢')) {
+                response = '不客气！很高兴能帮到您！🤝\n\n如果还有其他问题，随时欢迎咨询。祝您生活愉快！';
+            }
+            
+            addMessage(response, false);
+        }, 1000 + Math.random() * 1000);
+    }
+    
+    // 发送消息
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        if (!message) return;
+        
+        addMessage(message, true);
+        chatInput.value = '';
+        
+        // AI自动回复
+        botReply(message);
+    }
+    
+    // 发送按钮点击
+    chatSend.addEventListener('click', sendMessage);
+    
+    // 回车发送
+    chatInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+    
+    // 快捷建议按钮
+    suggestionBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const question = this.dataset.question;
+            addMessage(question, true);
+            botReply(question);
+        });
+    });
+})();
+

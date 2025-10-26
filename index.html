@@ -562,6 +562,56 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
+  <!-- 右下角机器人助手 -->
+  <div class="bot-assistant" id="botAssistant">
+    <img src="./gif/bot.gif" alt="智能助手" class="bot-image" />
+    <div class="bot-tooltip">需要帮助？点击咨询</div>
+  </div>
+
+  <!-- AI聊天窗口 -->
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-header-left">
+        <img src="./gif/bot.gif" alt="AI助手" class="chat-bot-avatar" />
+        <div class="chat-header-info">
+          <h3>AI智能助手</h3>
+          <span class="chat-status">在线</span>
+        </div>
+      </div>
+      <button class="chat-close" id="chatClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+      <div class="chat-welcome">
+        <img src="./gif/bot.gif" alt="欢迎" class="welcome-bot" />
+        <h3>您好！我是中泓万城智能助手</h3>
+        <p>我可以帮您了解公司业务、项目案例等信息</p>
+      </div>
+    </div>
+
+    <div class="chat-footer">
+      <div class="chat-input-wrapper">
+        <input type="text" class="chat-input" id="chatInput" placeholder="输入您的问题..." autocomplete="off" />
+        <button class="chat-send-btn" id="chatSend">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+      <div class="chat-suggestions">
+        <button class="suggestion-btn" data-question="公司主要业务是什么？">
+          <i class="fas fa-building"></i> 公司业务
+        </button>
+        <button class="suggestion-btn" data-question="有哪些成功案例？">
+          <i class="fas fa-trophy"></i> 成功案例
+        </button>
+        <button class="suggestion-btn" data-question="如何联系你们？">
+          <i class="fas fa-phone"></i> 联系方式
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- 外部脚本 -->
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
