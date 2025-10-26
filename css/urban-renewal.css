@@ -416,6 +416,7 @@
 .ur-cta {
   margin-top: 6rem;
   padding: 6rem 0;
+  height: 375px;
   background: url('../images/tab1/economic-business/1.png');
   background-size: cover;
   background-position: center;
@@ -449,41 +450,19 @@
 }
 
 .ur-cta-content h2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
   font-weight: 900;
 }
 
 .ur-cta-content p {
-  font-size: 1.3rem;
-  margin-bottom: 3rem;
+  font-size: 1rem;
+
   opacity: 0.9;
   font-weight: 300;
+  margin-bottom: 1.5rem;
 }
 
-.ur-cta-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.btn-lg {
-  padding: 1.2rem 3rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: #ffffff;
-}
-
-.btn-outline:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.6);
-}
 
 /* ========== 移动端适配 (≤ 768) ========== */
 @media (max-width: 768px) {

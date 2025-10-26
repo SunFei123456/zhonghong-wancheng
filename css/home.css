@@ -754,7 +754,7 @@
 /* 咨询横幅 - 背景图版 */
 .consultation-banner {
     position: relative;
-    min-height: 500px;
+    min-height: 375px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -803,7 +803,7 @@
 
 /* 主标题 */
 .banner-main-title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: #ffffff;
     margin: 0 0 1.5rem 0;
@@ -814,68 +814,14 @@
 
 /* 描述文本 */
 .banner-description {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.95);
     line-height: 1.8;
-    margin: 0 0 3rem 0;
+    margin: 0 0 1.5rem 0;
     font-weight: 400;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 咨询按钮 */
-.btn-consultation {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.2rem 3rem;
-    background: linear-gradient(135deg, #d12b26 0%, #f7532e 100%);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    box-shadow: 0 15px 40px rgba(209, 43, 38, 0.4);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-consultation::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #f7532e 0%, #d12b26 100%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.btn-consultation:hover::before {
-    opacity: 1;
-}
-
-.btn-consultation span,
-.btn-consultation i {
-    position: relative;
-    z-index: 1;
-}
-
-.btn-consultation:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 20px 50px rgba(209, 43, 38, 0.5);
-}
-
-.btn-consultation i {
-    font-size: 1rem;
-    transition: transform 0.4s ease;
-}
-
-.btn-consultation:hover i {
-    transform: translateX(8px);
-}
 
 
 

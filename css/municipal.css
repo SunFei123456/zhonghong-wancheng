@@ -253,6 +253,7 @@
 
 .m-cta {
   padding: 6rem;
+  max-height: 375px;
   background: linear-gradient(135deg, #fff5f4, #f5f9ff);
 }
 
