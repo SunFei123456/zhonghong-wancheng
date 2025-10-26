@@ -1,146 +1,225 @@
 /* 联系我们页面 */
 
-.container-wide{ max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
+.container-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
 
 /* Hero */
-.contact-hero{
-  padding: 12rem 0 8rem;
-  background: linear-gradient(135deg, #0b2b3a 0%, #1a4d5e 100%);
-  text-align: center;
+.contact-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
+  overflow: hidden;
 }
-.contact-hero-content h1{
-  font-size: 4.5rem;
+
+.contact-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.75);
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.contact-hero-content h1 {
+  font-size: 4rem;
   font-weight: 900;
   margin-bottom: 1rem;
 }
-.contact-hero-content p{
-  font-size: 1.5rem;
+
+.contact-hero-content p {
+  font-size: 1.6rem;
   opacity: 0.9;
   font-weight: 300;
 }
 
 /* 主要内容区 */
-.contact-main{
+.contact-main {
   padding: 8rem 0;
-  background: #ffffff;
+  background: #f7f7f7;
+
 }
-.contact-grid{
+
+.contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 6rem;
+  background-color: #fff;
+  border-radius: 16px;
 }
 
 /* 联系信息 */
-.contact-info h2{
+.contact-info {
+  position: relative;
+  padding: 4rem 3rem;
+  overflow: hidden;
+  background-image: url('../images/banner.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* 背景遮罩 */
+.contact-info::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(58, 11, 11, 0.85) 0%, rgba(26, 77, 94, 0.85) 100%);
+  z-index: 1;
+}
+
+/* 确保内容在遮罩之上 */
+.contact-info>* {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-info h2 {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #0b2b3a;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
-.contact-desc{
+
+.contact-desc {
   font-size: 1.1rem;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 3rem;
   line-height: 1.8;
 }
-.contact-info-list{
+
+.contact-info-list {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 4rem;
 }
-.contact-info-item{
+
+.contact-info-item {
   display: flex;
   gap: 1.5rem;
 }
-.contact-info-icon{
+
+.contact-info-icon {
   flex-shrink: 0;
   width: 60px;
   height: 60px;
   line-height: 60px;
   text-align: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, #d12b26, #f7532e);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
   font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
-.contact-info-content h4{
+
+.contact-info-item:hover .contact-info-icon {
+  background: linear-gradient(135deg, #d12b26, #f7532e);
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+.contact-info-content h4 {
   font-size: 1.2rem;
-  color: #0b2b3a;
+  color: #ffffff;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
-.contact-info-content p{
+
+.contact-info-content p {
   font-size: 1rem;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
 }
-.contact-social{
+
+.contact-social {
   padding-top: 2rem;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-.contact-social h4{
+
+.contact-social h4 {
   font-size: 1.2rem;
-  color: #0b2b3a;
+  color: #ffffff;
   margin-bottom: 1.5rem;
+  font-weight: 600;
 }
-.contact-social-icons{
+
+.contact-social-icons {
   display: flex;
   gap: 1rem;
 }
-.contact-social-icon{
+
+.contact-social-icon {
   width: 50px;
   height: 50px;
   line-height: 50px;
   text-align: center;
   border-radius: 50%;
-  background: #f3f4f6;
-  color: #6b7280;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
   transition: all 0.3s ease;
 }
-.contact-social-icon:hover{
-  background: linear-gradient(135deg, #d12b26, #f7532e);
+
+.contact-social-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
   color: #ffffff;
   transform: translateY(-5px);
 }
 
 /* 联系表单 */
-.contact-form-wrapper{
-  background: #f9fafb;
+.contact-form-wrapper {
   padding: 4rem;
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(9,20,40,0.08);
 }
-.contact-form h3{
+
+.contact-form h3 {
   font-size: 2rem;
   font-weight: 900;
   color: #0b2b3a;
   margin-bottom: 0.5rem;
 }
-.form-desc{
+
+.form-desc {
   font-size: 1rem;
   color: #6b7280;
   margin-bottom: 3rem;
 }
-.form-row{
+
+.form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
-.form-group{
+
+.form-group {
   margin-bottom: 1.5rem;
 }
-.form-group label{
+
+.form-group label {
   display: block;
   font-size: 0.95rem;
   font-weight: 600;
   color: #374151;
   margin-bottom: 0.5rem;
 }
+
 .form-group input,
 .form-group select,
-.form-group textarea{
+.form-group textarea {
   width: 100%;
   padding: 1rem;
   border: 1px solid #d1d5db;
@@ -150,71 +229,97 @@
   transition: all 0.3s ease;
   background: #ffffff;
 }
+
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus{
+.form-group textarea:focus {
   outline: none;
   border-color: #d12b26;
-  box-shadow: 0 0 0 3px rgba(209,43,38,0.1);
+  box-shadow: 0 0 0 3px rgba(209, 43, 38, 0.1);
 }
-.form-group textarea{
+
+.form-group textarea {
   resize: vertical;
 }
-.btn-block{
+
+.btn-block {
   width: 100%;
   margin-top: 1rem;
 }
-.btn-lg{
+
+.btn-lg {
   padding: 1.2rem 3rem;
   font-size: 1.1rem;
 }
 
 /* 地图区域 */
-.contact-map{
+.contact-map {
   padding: 0;
+  margin: 0;
 }
-.contact-map-container{
+
+.contact-map-container {
   height: 500px;
-  background: #f3f4f6;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
-.contact-map-placeholder{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #9ca3af;
-}
-.contact-map-placeholder i{
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-.contact-map-placeholder p{
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-.contact-map-placeholder small{
-  font-size: 0.9rem;
+
+.contact-map-container iframe {
+  border: none;
+  display: block;
 }
 
 /* 响应式 */
-@media (max-width: 1200px){
-  .contact-grid{
+@media (max-width: 1200px) {
+  .contact-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
 }
 
-@media (max-width: 768px){
-  .container-wide{ padding: 0 1.5rem; }
-  .contact-hero{ padding: 8rem 0 6rem; }
-  .contact-hero-content h1{ font-size: 3rem; }
-  .contact-hero-content p{ font-size: 1.2rem; }
-  .contact-main{ padding: 6rem 0; }
-  .contact-info h2{ font-size: 2rem; }
-  .contact-form-wrapper{ padding: 2.5rem 2rem; }
-  .contact-form h3{ font-size: 1.6rem; }
-  .form-row{ grid-template-columns: 1fr; }
-  .contact-map-container{ height: 350px; }
-}
+@media (max-width: 768px) {
+  .container-wide {
+    padding: 0 1.5rem;
+  }
 
+  .contact-hero {
+    min-height: 400px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .contact-hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .contact-main {
+    padding: 6rem 0;
+  }
+
+  .contact-info {
+    padding: 3rem 2rem;
+  }
+
+  .contact-info h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form-wrapper {
+    padding: 2.5rem 2rem;
+  }
+
+  .contact-form h3 {
+    font-size: 1.6rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-map-container {
+    height: 400px;
+  }
+}

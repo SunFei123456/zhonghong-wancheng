@@ -1,96 +1,127 @@
 /* 公司简介页面 */
 
-.container-wide{ max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
+.container-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
 
-.about-label{ 
-  display: inline-block; 
-  font-size: 0.7rem; 
-  text-transform: uppercase; 
-  letter-spacing: 0.2em; 
-  color: #d12b26; 
-  font-weight: 700; 
+.about-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #d12b26;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
 /* Hero */
-.about-hero{ 
-  position: relative; 
-  height: 70vh; 
-  min-height: 500px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  color: #ffffff; 
-  overflow: hidden; 
+.about-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  overflow: hidden;
 }
-.about-hero-bg{ 
-  position: absolute; 
-  inset: 0; 
-  background-size: cover; 
-  background-position: center; 
-  filter: brightness(0.4);
+
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.75);
 }
-.about-hero:after{ 
-  content: ""; 
-  position: absolute; 
-  inset: 0; 
-  background: rgba(0,0,0,0.3);
+
+
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
-.about-hero-content{ 
-  position: relative; 
-  z-index: 2; 
-  text-align: center; 
-}
-.about-hero-content h1{ 
-  font-size: 5rem; 
-  font-weight: 900; 
+
+.about-hero-content h1 {
+  font-size: 4rem;
+  font-weight: 900;
   margin-bottom: 1rem;
 }
-.about-hero-content p{ 
-  font-size: 1.6rem; 
+
+.about-hero-content p {
+  font-size: 1.6rem;
   font-weight: 300;
 }
 
+.about-hero-tags {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.about-tag {
+  padding: 0.8rem 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.about-tag:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
 /* 公司概况 */
-.about-overview{
+.about-overview {
   padding: 10rem 0;
   background: #ffffff;
 }
-.about-intro{
+
+.about-intro {
   text-align: center;
   max-width: 1000px;
   margin: 0 auto 6rem;
 }
-.about-intro h2{
+
+.about-intro h2 {
   font-size: 3.5rem;
   font-weight: 900;
   color: #0b2b3a;
   margin-bottom: 2rem;
 }
-.about-lead{
+
+.about-lead {
   font-size: 1.3rem;
   line-height: 2;
   color: #4b5563;
 }
-.about-stats{
+
+.about-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
 }
-.about-stat-item{
+
+.about-stat-item {
   text-align: center;
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, #f8fafb, #ffffff);
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(9,20,40,0.06);
   transition: all 0.3s ease;
 }
-.about-stat-item:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(9,20,40,0.12);
-}
-.about-stat-num{
-  font-size: 4rem;
+
+
+
+.about-stat-num {
+  font-size: 3rem;
   font-weight: 900;
   background: linear-gradient(135deg, #d12b26, #f7532e);
   -webkit-background-clip: text;
@@ -99,209 +130,1293 @@
   margin-bottom: 1rem;
   line-height: 1;
 }
-.about-stat-label{
+
+.about-stat-label {
   font-size: 1.1rem;
   color: #6b7280;
 }
 
-/* 核心业务 */
-.about-business{
+/* 核心业务 - 图片卡片风格 */
+.about-business {
   padding: 10rem 0;
-  background: linear-gradient(180deg, #f8fafb 0%, #ffffff 100%);
+  position: relative;
+  background-image: url('../images/banner.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
-.about-section-header{
+
+.about-business::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.096);
+}
+
+.about-business .container-wide {
+  position: relative;
+  z-index: 1;
+}
+
+.about-section-header {
   text-align: center;
   margin-bottom: 5rem;
 }
-.about-section-header h2{
+
+.about-section-header h2 {
   font-size: 3rem;
   font-weight: 900;
   color: #0b2b3a;
 }
-.about-business-grid{
+
+.about-business-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  gap: 2rem;
 }
-.about-business-card{
-  padding: 3rem;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(9,20,40,0.06);
-  transition: all 0.3s ease;
-}
-.about-business-card:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(9,20,40,0.12);
-}
-.about-business-icon{
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #d12b26, #f7532e);
-  color: #ffffff;
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.about-business-card h3{
-  font-size: 1.8rem;
-  color: #0b2b3a;
-  margin-bottom: 1rem;
-}
-.about-business-card p{
-  font-size: 1.1rem;
-  color: #6b7280;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-}
-.about-link{
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #d12b26;
+
+.about-business-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 450px;
+  transition: all 0.4s ease;
+  cursor: pointer;
   text-decoration: none;
-  font-weight: 600;
-  transition: gap 0.3s ease;
-}
-.about-link:hover{
-  gap: 1rem;
+  display: block;
 }
 
-/* 企业优势 */
-.about-advantages{
-  padding: 10rem 0;
-  background: #ffffff;
-}
-.about-adv-grid{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-}
-.about-adv-item{
-  padding: 3rem;
-  background: linear-gradient(135deg, #f8fafb, #ffffff);
-  border-radius: 20px;
-  border-left: 4px solid #d12b26;
-  transition: all 0.3s ease;
-}
-.about-adv-item:hover{
-  transform: translateX(10px);
-  box-shadow: 0 20px 60px rgba(9,20,40,0.1);
-}
-.about-adv-num{
-  display: inline-block;
-  font-size: 3rem;
-  font-weight: 900;
-  color: rgba(209,43,38,0.2);
-  margin-bottom: 1rem;
-}
-.about-adv-item h4{
-  font-size: 1.8rem;
-  color: #0b2b3a;
-  margin-bottom: 1rem;
-}
-.about-adv-item p{
-  font-size: 1.1rem;
-  color: #6b7280;
-  line-height: 1.8;
+.about-business-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(9, 20, 40, 0.2);
 }
 
-/* 企业文化 */
-.about-culture{
-  padding: 10rem 0;
-  background: linear-gradient(135deg, #0b2b3a 0%, #1a4d5e 100%);
-}
-.about-culture-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-}
-.about-culture-item{
-  text-align: center;
-  padding: 4rem 3rem;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 20px;
-  color: #ffffff;
-  transition: all 0.3s ease;
-}
-.about-culture-item:hover{
-  background: rgba(255,255,255,0.1);
-  transform: translateY(-10px);
-}
-.about-culture-icon{
-  width: 90px;
-  height: 90px;
-  line-height: 90px;
-  margin: 0 auto 2rem;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  border: 2px solid rgba(255,255,255,0.3);
-  font-size: 3rem;
-}
-.about-culture-item h3{
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-.about-culture-item p{
-  font-size: 1.1rem;
-  opacity: 0.9;
+/* 背景图片 */
+.about-business-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
 }
 
-/* CTA */
-.about-cta{
-  padding: 12rem 0;
-  background: linear-gradient(135deg, #d12b26, #f7532e);
-  text-align: center;
+.about-business-card:hover .about-business-bg {
+  transform: scale(1.05);
+}
+
+/* 深色遮罩 */
+.about-business-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+/* 内容区域 */
+.about-business-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #ffffff;
 }
-.about-cta-content h2{
-  font-size: 3.5rem;
-  font-weight: 900;
+
+/* 图标 */
+.about-business-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* 主标题 */
+.about-business-card h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* 描述文字 */
+.about-business-card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-.about-cta-content p{
-  font-size: 1.4rem;
-  margin-bottom: 3rem;
-  opacity: 0.95;
+
+/* 底部信息 */
+.about-business-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.btn-lg{
-  padding: 1.2rem 3rem;
+
+.about-business-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.about-business-card:hover .about-business-link {
+  color: #ffffff;
+  gap: 0.8rem;
+}
+
+/* 右下角+号按钮 */
+.about-business-plus {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.about-business-card:hover .about-business-plus {
+  background: #ffffff;
+  color: #d12b26;
+  transform: rotate(90deg);
+}
+
+/* 发展历程 - 横向交互式时间线 */
+.about-history {
+  padding: 0;
+  background: #0b2b3a;
+}
+
+.history-timeline {
+  display: flex;
+  background-color: #0b2b3a;
+}
+
+.history-timeline:hover .tl-item {
+  width: 14.6%;
+}
+
+.tl-item {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  width: 16.666%;
+  height: 100vh;
+  min-height: 600px;
+  color: #fff;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+
+.tl-item::before,
+.tl-item::after {
+  transform: translate3d(0, 0, 0);
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tl-item::after {
+  background: rgba(11, 43, 58, 0.85);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.tl-item::before {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 75%);
+  z-index: 1;
+  opacity: 0;
+  transform: translate3d(0, 0, 0) translateY(50%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tl-item:hover {
+  width: 30% !important;
+}
+
+.tl-item:hover::after {
+  opacity: 0;
+}
+
+.tl-item:hover::before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) translateY(0);
+  transition: opacity 1s ease, transform 1s ease 0.25s;
+}
+
+.tl-item:hover .tl-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.75s ease 0.5s;
+}
+
+.tl-item:hover .tl-bg {
+  filter: grayscale(0);
+}
+
+.tl-content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin: 0 1.618em;
+  top: 55%;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tl-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.tl-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.tl-year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding: 1rem 0;
+  transition: opacity 0.5s ease;
+}
+
+.tl-item:hover .tl-year {
+  opacity: 0;
+}
+
+.tl-year p {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.tl-bg {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+}
+
+/* 荣誉资质 - 左右分栏布局 + Coverflow */
+.about-honors {
+  position: relative;
+  min-height: 100vh;
+  padding: min(20vh, 3rem) 0;
+  overflow: hidden;
+}
+
+/* 装饰性背景图 */
+.honors-bg {
+  position: fixed;
+  top: -4rem;
+  left: -12rem;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.honors-bg2 {
+  position: fixed;
+  bottom: -2rem;
+  right: -3rem;
+  z-index: 0;
+  width: 9.375rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.honors-content {
+  position: relative;
+  width: calc(min(90rem, 90%));
+  margin: 0 auto;
+  min-height: 100vh;
+  column-gap: 3rem;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+/* 左侧文字区域 */
+.honors-text {
+  flex: 1;
+}
+
+
+
+.honors-text h1 {
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  background-color: #d12b26;
+  background-image: linear-gradient(45deg, #d12b26, #f7532e);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  margin: 0.5rem 0 0 0;
+}
+
+.honors-text hr {
+  display: block;
+  background: #d12b26;
+  height: 0.25rem;
+  width: 6.25rem;
+  border: none;
+  margin: 1.125rem 0 1.875rem 0;
+}
+
+.honors-text p {
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.85);
   font-size: 1.1rem;
 }
 
-/* 响应式 */
-@media (max-width: 1200px){
-  .about-stats{
+.honors-text a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #717171;
+  font-weight: 500;
+  background: #fff;
+  border-radius: 3.125rem;
+  transition: 0.3s ease-in-out;
+  border: 2px solid #c2c2c2;
+  margin-top: 2.188rem;
+  padding: 0.625rem 1.875rem;
+}
+
+.honors-text a:hover {
+  border: 0.125rem solid #d12b26;
+  color: #d12b26;
+}
+
+/* 右侧轮播区域 */
+.honors-swiper {
+  flex: 1;
+  width: 100%;
+  padding-top: 3.125rem;
+  padding-bottom: 80px;
+}
+
+.honors-swiper .swiper-slide {
+  width: 18.75rem;
+  height: 28.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+  border-radius: 20px;
+}
+
+.honors-swiper .swiper-slide h2 {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 0.625rem;
+  padding: 0 0 0 1.563rem;
+  text-transform: uppercase;
+}
+
+.honors-swiper .swiper-slide p {
+  color: #dadada;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 0 1.563rem;
+  line-height: 1.6;
+  font-size: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.honors-swiper .swiper-slide a {
+  margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+  padding: 0.438em 1.875rem;
+  font-size: 0.9rem;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #717171;
+  font-weight: 500;
+  background: #fff;
+  border-radius: 3.125rem;
+  transition: 0.3s ease-in-out;
+}
+
+.honors-swiper .swiper-slide a:hover {
+  color: #d12b26;
+}
+
+.honors-swiper .swiper-slide .honor-content {
+  display: none;
+  opacity: 0;
+  padding-bottom: 0.625rem;
+}
+
+.honors-swiper .swiper-slide-active .honor-content {
+  display: block;
+  opacity: 1;
+}
+
+/* 背景图片 */
+.honors-slide-one {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../images/1.jpg") no-repeat 50% 50% / cover;
+}
+
+.honors-slide-two {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../images/2.jpg") no-repeat 50% 50% / cover;
+}
+
+.honors-slide-three {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../images/3.jpg") no-repeat 50% 50% / cover;
+}
+
+.honors-slide-four {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../images/4.jpg") no-repeat 50% 50% / cover;
+}
+
+.honors-slide-five {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../images/banner.png") no-repeat 50% 50% / cover;
+}
+
+.honors-slide-six {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("../images/banner1.jpg") no-repeat 50% 50% / cover;
+}
+
+/* 移除默认阴影 */
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+/* 分页器样式 */
+.honors-pagination {
+  bottom: 20px !important;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.honors-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.honors-pagination .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+
+/* 桌面端显示装饰背景 */
+@media screen and (min-width: 48rem) {
+
+  .honors-bg,
+  .honors-bg2 {
+    opacity: 0.1;
+  }
+}
+
+/* FAQ - 左右布局 */
+.about-faq {
+  padding: 10rem 0;
+  background: #ffffff;
+}
+
+.about-faq .about-section-header {
+  margin-bottom: 5rem;
+}
+
+.faq-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* 左侧卡片 */
+.faq-card {
+  position: relative;
+  height: 100%;
+  min-height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(9, 20, 40, 0.15);
+  position: sticky;
+  top: 120px;
+}
+
+.faq-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.faq-card:hover .faq-card-bg {
+  transform: scale(1.05);
+}
+
+.faq-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11, 43, 58, 0.92) 0%, rgba(209, 43, 38, 0.85) 100%);
+}
+
+.faq-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.faq-card-content h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.faq-card-content>p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+}
+
+.faq-card-stats {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.faq-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.faq-stat-num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.faq-stat-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.faq-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 2.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.faq-cta-btn:hover {
+  background: #ffffff;
+  color: #d12b26;
+  border-color: #ffffff;
+  gap: 1.5rem;
+}
+
+.faq-cta-btn i {
+  transition: transform 0.3s ease;
+}
+
+.faq-cta-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* 右侧问题列表 */
+.faq-list {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(9, 20, 40, 0.08);
+}
+
+.faq-item {
+  margin-bottom: 0;
+  border-bottom: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.5rem 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0b2b3a;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #d12b26;
+}
+
+.faq-question span {
+  flex: 1;
+}
+
+.faq-question i {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: #d12b26;
+  font-size: 1.2rem;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding-bottom: 1.5rem;
+}
+
+.faq-answer p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #6b7280;
+}
+
+/* ========== 移动端适配 (≤ 786px) ========== */
+@media (max-width: 786px) {
+
+  /* 容器 */
+  .container-wide {
+    padding: 0 2rem;
+  }
+
+  /* Hero 区域 */
+  .about-hero {
+    min-height: 500px;
+    height: 70vh;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .about-hero-tags {
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-tag {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* 公司概况 */
+  .about-overview {
+    padding: 6rem 0;
+  }
+
+  .about-intro {
+    margin-bottom: 4rem;
+  }
+
+  .about-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-lead {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .about-stats {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
-  .about-business-grid{
-    grid-template-columns: 1fr;
+
+  .about-stat-item {
+    padding: 2rem 1.5rem;
   }
-  .about-culture-grid{
+
+  .about-stat-num {
+    font-size: 2.5rem;
+  }
+
+  .about-stat-label {
+    font-size: 1rem;
+  }
+
+  /* 核心业务 */
+  .about-business {
+    padding: 6rem 0;
+  }
+
+  .about-section-header {
+    margin-bottom: 3rem;
+  }
+
+  .about-section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-business-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-business-card {
+    height: 400px;
+  }
+
+  .about-business-content {
+    padding: 1.8rem;
+  }
+
+  .about-business-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .about-business-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .about-business-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* 发展历程 */
+  .history-timeline {
+    flex-direction: column;
+  }
+
+  .history-timeline:hover .tl-item {
+    width: 100%;
+  }
+
+  .tl-item {
+    width: 100% !important;
+    height: 50vh;
+    min-height: 350px;
+  }
+
+  .tl-item:hover {
+    width: 100% !important;
+    height: 60vh;
+  }
+
+  .tl-content {
+    top: 50%;
+  }
+
+  .tl-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .tl-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .tl-year p {
+    font-size: 2.2rem;
+  }
+
+  /* 荣誉资质 */
+  .about-honors {
+    padding: 6rem 0;
+  }
+
+  .honors-content {
+    flex-direction: column;
+    min-height: auto;
+    width: 90%;
+  }
+
+  .honors-text {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .honors-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .honors-text hr {
+    margin: 1rem auto 1.5rem;
+  }
+
+  .honors-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .honors-text a {
+    margin-top: 1.5rem;
+  }
+
+  .honors-swiper {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 60px;
+  }
+
+  .honors-swiper .swiper-slide {
+    width: 280px;
+    height: 400px;
+  }
+
+  .honors-swiper .swiper-slide h2 {
+    font-size: 1.3rem;
+  }
+
+  .honors-swiper .swiper-slide p {
+    font-size: 0.75rem;
+  }
+
+  /* FAQ */
+  .about-faq {
+    padding: 6rem 0;
+  }
+
+  .faq-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .faq-card {
+    min-height: 500px;
+    position: relative;
+    top: 0;
+  }
+
+  .faq-card-content {
+    padding: 3rem 2.5rem;
+  }
+
+  .faq-card-content h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .faq-card-content>p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .faq-card-stats {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  .faq-stat-num {
+    font-size: 2.2rem;
+  }
+
+  .faq-stat-label {
+    font-size: 0.9rem;
+  }
+
+  .faq-cta-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .faq-list {
+    padding: 2.5rem 2rem;
+  }
+
+  .faq-question {
+    padding: 1.3rem 0;
+    font-size: 1.05rem;
+    gap: 1.5rem;
+  }
+
+  .faq-question i {
+    font-size: 1.1rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 }
 
-@media (max-width: 768px){
-  .container-wide{ padding: 0 1.5rem; }
-  .about-hero{ min-height: 400px; }
-  .about-hero-content h1{ font-size: 3rem; }
-  .about-hero-content p{ font-size: 1.2rem; }
-  .about-overview{ padding: 6rem 0; }
-  .about-intro h2{ font-size: 2.5rem; }
-  .about-lead{ font-size: 1.1rem; }
-  .about-stats{ grid-template-columns: 1fr; gap: 2rem; }
-  .about-stat-num{ font-size: 3rem; }
-  .about-business{ padding: 6rem 0; }
-  .about-section-header h2{ font-size: 2rem; }
-  .about-advantages{ padding: 6rem 0; }
-  .about-adv-grid{ grid-template-columns: 1fr; }
-  .about-culture{ padding: 6rem 0; }
-  .about-cta{ padding: 8rem 0; }
-  .about-cta-content h2{ font-size: 2.5rem; }
-}
+/* ========== 超小屏幕适配 (≤ 480px) ========== */
+@media (max-width: 480px) {
 
+  /* 容器 */
+  .container-wide {
+    padding: 0 1rem;
+  }
+
+  /* Hero 区域 */
+  .about-hero {
+    min-height: 450px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-hero-content p {
+    font-size: 1rem;
+  }
+
+  .about-hero-tags {
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+  }
+
+  .about-tag {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* 公司概况 */
+  .about-overview {
+    padding: 4rem 0;
+  }
+
+  .about-intro {
+    margin-bottom: 3rem;
+  }
+
+  .about-intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-lead {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-stat-item {
+    padding: 2rem 1rem;
+  }
+
+  .about-stat-num {
+    font-size: 2.2rem;
+  }
+
+  .about-stat-label {
+    font-size: 0.95rem;
+  }
+
+  /* 核心业务 */
+  .about-business {
+    padding: 4rem 0;
+  }
+
+  .about-section-header {
+    margin-bottom: 2rem;
+  }
+
+  .about-section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-business-grid {
+    gap: 1rem;
+  }
+
+  .about-business-card {
+    height: 350px;
+  }
+
+  .about-business-content {
+    padding: 1.5rem;
+  }
+
+  .about-business-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .about-business-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .about-business-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .about-business-link {
+    font-size: 0.8rem;
+  }
+
+  .about-business-plus {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+
+  /* 发展历程 */
+  .tl-item {
+    height: 45vh;
+    min-height: 300px;
+  }
+
+  .tl-item:hover {
+    height: 55vh;
+  }
+
+  .tl-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .tl-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .tl-year p {
+    font-size: 1.8rem;
+  }
+
+  /* 荣誉资质 */
+  .about-honors {
+    padding: 4rem 0;
+  }
+
+  .honors-content {
+    width: 95%;
+  }
+
+  .honors-text {
+    margin-bottom: 2rem;
+  }
+
+  .honors-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .honors-text hr {
+    width: 4rem;
+    height: 0.2rem;
+  }
+
+  .honors-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .honors-text a {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    margin-top: 1.2rem;
+  }
+
+  .honors-swiper {
+    padding-bottom: 50px;
+  }
+
+  .honors-swiper .swiper-slide {
+    width: 240px;
+    height: 350px;
+  }
+
+  .honors-swiper .swiper-slide h2 {
+    font-size: 1.1rem;
+    padding: 0 0 0 1rem;
+  }
+
+  .honors-swiper .swiper-slide p {
+    font-size: 0.7rem;
+    padding: 0 1rem;
+  }
+
+  .honors-swiper .swiper-slide a {
+    margin: 0.8rem 1rem 2rem 1rem;
+    padding: 0.4rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  /* FAQ */
+  .about-faq {
+    padding: 4rem 0;
+  }
+
+  .faq-container {
+    gap: 2rem;
+  }
+
+  .faq-card {
+    min-height: 450px;
+  }
+
+  .faq-card-content {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .faq-card-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .faq-card-content>p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-card-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem 0;
+  }
+
+  .faq-stat-num {
+    font-size: 2rem;
+  }
+
+  .faq-stat-label {
+    font-size: 0.85rem;
+  }
+
+  .faq-cta-btn {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .faq-list {
+    padding: 2rem 1.2rem;
+  }
+
+  .faq-question {
+    padding: 1rem 0;
+    font-size: 0.95rem;
+    gap: 1rem;
+  }
+
+  .faq-question i {
+    font-size: 1rem;
+  }
+
+  .faq-item.active .faq-answer {
+    padding-bottom: 1rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}

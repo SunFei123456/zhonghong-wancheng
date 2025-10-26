@@ -27,7 +27,7 @@
 /* Hero - 全屏沉浸式 */
 .w-hero {
   position: relative;
-  height: 100vh;
+  height: 70vh;
   min-height: 600px;
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@
 }
 
 .w-hero-title {
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1.5rem;
@@ -64,7 +64,7 @@
 }
 
 .w-hero-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   opacity: 0.95;
   margin-bottom: 3rem;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -238,12 +238,12 @@
   color: #6b7280;
   opacity: 0.95;
   font-weight: 300;
-  text-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .w-cap-img img {
   width: 100%;
-  height: 100%; 
+  height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
 }
@@ -395,8 +395,59 @@
   flex-wrap: wrap;
 }
 
-/* 响应式 */
-@media (max-width: 1200px) {
+/* ========== 移动端适配 (≤ 1024px) ========== */
+@media (max-width: 1024px) {
+
+  /* 容器 */
+  .container-wide {
+    padding: 0 2rem;
+  }
+
+  .container-narrow {
+    padding: 0 1.5rem;
+  }
+
+  /* Hero 区域 */
+  .w-hero {
+    min-height: 600px;
+    height: 80vh;
+  }
+
+  .w-hero-content {
+    padding: 0 1.5rem;
+  }
+
+  .w-hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .w-hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .w-hero-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .w-hero-actions .btn {
+    width: 100%;
+  }
+
+  .w-hero-scroll {
+    bottom: 2rem;
+    font-size: 0.75rem;
+  }
+
+  /* 概览区 */
+  .w-overview {
+    padding: 4rem 2rem;
+  }
+
   .w-overview-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -406,6 +457,38 @@
     height: 400px;
   }
 
+  .w-overview-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .w-overview-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .w-check-list {
+    gap: 0.8rem;
+  }
+
+  .w-check-list li {
+    font-size: 1rem;
+  }
+
+  /* 核心能力 */
+  .w-capabilities {
+    padding: 4rem 0;
+  }
+
+  .w-section-header {
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+  }
+
+  .w-section-header h2 {
+    font-size: 2rem;
+  }
+
   .w-cap-block {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -413,89 +496,54 @@
 
   .w-cap-block .w-cap-text,
   .w-cap-block.reverse .w-cap-text {
-    padding: 4rem 3rem;
+    padding: 3rem 2rem;
     order: 2;
+  }
+
+  .w-cap-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .w-cap-text p {
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   .w-cap-block .w-cap-img,
   .w-cap-block.reverse .w-cap-img {
     order: 1;
-    min-height: 300px;
+    min-height: 280px;
   }
 
-  .container-wide {
-    padding: 0 2rem;
-  }
-
-  .w-cta {
-    padding: 5rem 0;
-  }
-
-  .w-cta-content h2 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .w-hero {
-    min-height: 500px;
-  }
-
-  .w-hero-title {
-    font-size: 2.5rem;
-  }
-
-  .w-hero-subtitle {
-    font-size: 1.1rem;
-  }
-
-
-  .w-overview {
-    padding: 6rem 0;
-  }
-
-  .w-overview-grid {
-    padding: 0 1.5rem;
-  }
-
-  .w-overview-content h2 {
-    font-size: 2rem;
-  }
-
-  .w-capabilities,
+  /* 重要性手风琴 */
   .w-process {
-    padding: 6rem 0;
-  }
-
-  .w-section-header {
-    margin-bottom: 3rem;
-  }
-
-  .w-section-header h2 {
-    font-size: 2rem;
+    padding: 4rem 0;
   }
 
   .w-accordion {
     flex-direction: column;
     height: auto;
+    gap: 0.8rem;
   }
 
   .w-accordion-item {
-    flex: 0 0 120px;
+    flex: 0 0 140px;
+    border-radius: 16px;
   }
 
   .w-accordion-item.active {
-    flex: 0 0 200px;
+    flex: 0 0 240px;
   }
 
   .w-accordion-num {
-    font-size: 2.5rem;
+    font-size: 3rem;
     top: 1.5rem;
     left: 1.5rem;
   }
 
   .w-accordion-item.active .w-accordion-num {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .w-accordion-content {
@@ -505,42 +553,233 @@
   }
 
   .w-accordion-content h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
   }
 
   .w-accordion-content p {
     font-size: 0.95rem;
+    line-height: 1.6;
   }
 
+  /* CTA 区域 */
   .w-cta {
-    padding: 4rem 0;
+    padding: 4rem 2rem;
   }
 
   .w-cta-content {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   }
 
   .w-cta-content h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
   }
 
   .w-cta-content p {
     font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
   }
 
   .w-cta-actions {
     flex-direction: column;
+    gap: 0.8rem;
     align-items: center;
   }
 
   .w-cta-actions .btn {
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
   }
 
+  .btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* ========== 超小屏幕适配 (≤ 480px) ========== */
+@media (max-width: 480px) {
+
+  /* 容器 */
   .container-wide,
   .container-narrow {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
+  }
+
+  /* Hero 区域 */
+  .w-hero {
+    min-height: 500px;
+  }
+
+  .w-hero-content {
+    padding: 0 1rem;
+  }
+
+  .w-hero-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .w-hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .w-hero-actions {
+    max-width: 100%;
+  }
+
+  .w-hero-scroll {
+    bottom: 1.5rem;
+    font-size: 0.7rem;
+  }
+
+  .w-hero-scroll i {
+    font-size: 1rem;
+  }
+
+  /* 概览区 */
+  .w-overview {
+    padding: 3rem 1rem;
+  }
+
+  .w-overview-grid {
+    gap: 2rem;
+  }
+
+  .w-overview-media img {
+    height: 280px;
+    border-radius: 12px;
+  }
+
+  .w-overview-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .w-overview-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .w-check-list li {
+    font-size: 0.9rem;
+  }
+
+  .w-check-list i {
+    font-size: 1rem;
+  }
+
+  /* 核心能力 */
+  .w-capabilities {
+    padding: 3rem 0;
+  }
+
+  .w-section-header {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .w-section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .w-section-header p.muted {
+    font-size: 0.9rem;
+  }
+
+  .w-cap-block .w-cap-text,
+  .w-cap-block.reverse .w-cap-text {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .w-cap-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .w-cap-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .w-cap-block .w-cap-img,
+  .w-cap-block.reverse .w-cap-img {
+    min-height: 220px;
+  }
+
+  /* 重要性手风琴 */
+  .w-process {
+    padding: 3rem 0;
+  }
+
+  .w-accordion {
+    gap: 0.6rem;
+  }
+
+  .w-accordion-item {
+    flex: 0 0 100px;
+    border-radius: 12px;
+  }
+
+  .w-accordion-item.active {
+    flex: 0 0 200px;
+  }
+
+  .w-accordion-num {
+    font-size: 2.5rem;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .w-accordion-item.active .w-accordion-num {
+    font-size: 3rem;
+  }
+
+  .w-accordion-content {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .w-accordion-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .w-accordion-content p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  /* CTA 区域 */
+  .w-cta {
+    padding: 3rem 1rem;
+  }
+
+  .w-cta-content {
+    padding: 0;
+  }
+
+  .w-cta-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .w-cta-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .w-cta-actions {
+    gap: 0.6rem;
+  }
+
+  .w-cta-actions .btn {
+    max-width: 100%;
+  }
+
+  .btn-lg {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
   }
 }

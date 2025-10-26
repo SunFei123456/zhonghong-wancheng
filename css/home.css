@@ -52,7 +52,7 @@
     position: relative;
     width: 520px;
     max-width: 100%;
-    border-radius: 18px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(30, 80, 179, 0.08);
 }
@@ -66,11 +66,6 @@
 
 
 @media (max-width: 992px) {
-    .about-container {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 2rem;
-    }
 
     .about-left {
         max-width: 100%;
@@ -131,7 +126,7 @@
 
 .service-card {
     position: relative;
-    border-radius: 16px;
+    border-radius: 8px;
     padding: 2.5rem 2rem;
     text-decoration: none;
     overflow: hidden;
@@ -140,6 +135,21 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.service-card:hover::before {
+    background: rgba(0, 0, 0, 0.1);
 }
 
 /* 为每个服务卡片添加背景图片 */
@@ -185,25 +195,13 @@
     background-repeat: no-repeat;
 }
 
-/* 添加半透明遮罩以确保文字可读性 */
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.25);
-    z-index: 1;
-    transition: background 0.35s ease;
-}
 
-.service-card:hover::before {
-    background: rgba(255, 255, 255, 0.1);
-}
+
+
+
 
 /* 确保卡片内容在遮罩之上 */
-.service-card > * {
+.service-card>* {
     position: relative;
     z-index: 2;
 }
@@ -264,29 +262,7 @@
     margin-bottom: 1.5rem;
 }
 
-.service-arrow {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: all 0.35s ease;
-    margin-top: auto;
-}
 
-.service-arrow i {
-    color: #d12b26;
-    font-size: 0.9rem;
-}
-
-.service-card:hover .service-arrow {
-    opacity: 1;
-    transform: translateX(0);
-}
 
 @media (max-width: 992px) {
     .service-grid {
@@ -322,8 +298,7 @@
 /* 文化空间建设轮播 */
 .cases-section {
     background: #050826;
-    padding: 4.5rem 0;
-    color: #ffffff;
+    padding: 6rem 0;
 }
 
 .cases-top {
@@ -349,15 +324,15 @@
     background: transparent;
     color: #ffffff;
     padding: 0.55rem 1.2rem;
-    border-radius: 24px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.25s ease;
 }
 
 .pill.active,
 .pill:hover {
-    background: transparent;
-    border-color: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, #d12b26, #f7532e);
+    border-color: #C91F37;
 }
 
 .cases-carousel {
@@ -380,7 +355,7 @@
 .case-card {
     flex: 0 0 68%;
     max-width: 920px;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     background: linear-gradient(180deg, rgba(30, 80, 179, 0.08), rgba(0, 0, 0, 0.06));
     box-shadow: 0 12px 30px rgba(2, 6, 23, 0.6);
@@ -440,50 +415,8 @@
     margin-right: 10px
 }
 
-@media (max-width: 1200px) {
-    .cases-track {
-        padding: 1rem 8%;
-    }
 
-    .case-card {
-        flex: 0 0 75%;
-        max-width: 760px
-    }
 
-    .case-card img {
-        height: 360px
-    }
-}
-
-@media (max-width: 768px) {
-    .cases-track {
-        padding: 0 6%;
-    }
-
-    .case-card {
-        flex: 0 0 86%;
-        max-width: 620px
-    }
-
-    .case-card img {
-        height: 260px
-    }
-}
-
-@media (max-width: 480px) {
-    .cases-track {
-        padding: 0 4%;
-    }
-
-    .case-card {
-        flex: 0 0 92%;
-        max-width: 520px
-    }
-
-    .case-card img {
-        height: 200px
-    }
-}
 
 /* 案例库 */
 .cases-library {
@@ -519,7 +452,7 @@
 
 .case-item {
     position: relative;
-    border-radius: 14px;
+    border-radius: 8px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.62);
     backdrop-filter: blur(8px) saturate(120%);
@@ -560,14 +493,16 @@
     max-width: 75%;
 }
 
-.case-meta .tag {
+.case-meta .case-tag {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.95);
-    padding: 6px 10px;
-    border-radius: 18px;
-    font-size: 0.78rem;
-    margin-bottom: 0.5rem;
+    background: rgba(209, 43, 38, 0.95);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
 }
 
 .case-meta h3 {
@@ -626,47 +561,7 @@
     grid-column: span 2;
 }
 
-@media (max-width: 1400px) {
-    .cases-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
-@media (max-width: 1200px) {
-    .cases-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cases-grid>.case-item:first-child {
-        grid-column: span 2;
-    }
-
-    .case-media img {
-        height: 340px
-    }
-}
-
-@media (max-width: 760px) {
-    .cases-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .cases-grid>.case-item:first-child {
-        grid-column: auto;
-    }
-
-    .case-media img {
-        height: 220px
-    }
-
-    .case-overlay {
-        padding: 0.85rem
-    }
-
-    .case-meta h3 {
-        font-size: 1.05rem
-    }
-}
 
 @keyframes fadeIn {
     from {
@@ -688,7 +583,7 @@
     background: rgba(255, 255, 255, 0.95);
     color: #d12b26;
     padding: 6px 14px;
-    border-radius: 20px;
+    border-radius: 8px;
     font-size: 0.85rem;
     font-weight: 600;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -726,7 +621,7 @@
 
 .design-large {
     position: relative;
-    border-radius: 16px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -810,7 +705,7 @@
 
 .design-item {
     position: relative;
-    border-radius: 16px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -855,67 +750,6 @@
     flex-wrap: wrap;
 }
 
-@media (max-width: 1200px) {
-    .designs-showcase {
-        grid-template-columns: 1fr;
-    }
-
-    .design-large img {
-        height: 500px;
-    }
-
-    .design-grid {
-        flex-direction: row;
-        grid-template-columns: repeat(3, 1fr);
-        display: grid;
-    }
-
-    .design-item {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .architectural-designs-section {
-        padding: 4rem 0;
-    }
-
-    .designs-showcase {
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .design-large img {
-        height: 400px;
-    }
-
-    .design-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .design-item {
-        height: 250px;
-    }
-
-    .design-overlay h3 {
-        font-size: 1.4rem;
-    }
-
-    .design-overlay h4 {
-        font-size: 1.1rem;
-    }
-
-    .view-more-designs {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .view-more-designs .btn {
-        width: 100%;
-        max-width: 300px;
-    }
-}
 
 /* 咨询横幅 - 背景图版 */
 .consultation-banner {
@@ -1043,61 +877,305 @@
     transform: translateX(8px);
 }
 
-/* 响应式设计 */
-@media (max-width: 992px) {
-    .consultation-banner {
-        min-height: 450px;
+
+
+
+
+/* ========== 首页移动端响应式优化 ========== */
+
+/* 平板端 (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+
+    /* 关于我们部分 */
+
+
+    .about-section {
+        padding: 4rem 2rem;
     }
 
-    .banner-main-title {
-        font-size: 2.8rem;
-    }
-
-    .banner-description {
-        font-size: 1.15rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .consultation-banner {
-        min-height: 400px;
-    }
-
-    .banner-content-center {
-        padding: 3rem 1.5rem;
-    }
-
-    .banner-main-title {
+    .about-title {
         font-size: 2.2rem;
     }
 
-    .banner-description {
-        font-size: 1.05rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .btn-consultation {
-        width: 100%;
-        max-width: 300px;
-        padding: 1.1rem 2.5rem;
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .consultation-banner {
-        min-height: 350px;
-    }
-
-    .banner-main-title {
-        font-size: 1.8rem;
-    }
-
-    .banner-description {
+    .about-desc {
         font-size: 1rem;
     }
 
+    /* 服务分类 */
+    .service-categories-section {
+        padding: 4rem 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    /* 案例展示 */
+    .cases-section {
+        padding: 3.5rem 0;
+    }
+
+    .cases-title {
+        font-size: 2.2rem;
+    }
+
+    /* 城市更新 */
+    .cases-library {
+        padding: 4rem 2rem;
+    }
+
+    /* 建筑设计图 */
+    .architectural-designs-section {
+        padding: 4rem 2rem;
+    }
+}
+
+/* 手机端 (≤ 768px) */
+@media (max-width: 768px) {
+
+    /* 关于我们部分 */
+    .about-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .about-section {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .about-desc {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+
+    .about-cta {
+        padding: 0.75rem 1.8rem;
+        font-size: 0.95rem;
+    }
+
+    .about-image-wrap {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* 服务分类 */
+    .service-categories-section {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .service-categories-section .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-categories-section .section-header .muted {
+        font-size: 0.9rem;
+    }
+
+    .service-card {
+        padding: 1.8rem 1.5rem;
+    }
+
+    .service-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.4rem;
+    }
+
+    .service-title {
+        font-size: 1.05rem;
+    }
+
+    .service-desc {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+
+
+
+
+    .cases-library .case-media img {
+        height: 280px;
+    }
+
+    .cases-library .case-overlay {
+        padding: 1rem;
+    }
+
+    /* 案例轮播 */
+    .cases-section {
+        padding: 2.5rem 0;
+    }
+
+    .cases-top {
+        margin-bottom: 2rem;
+    }
+
+    .cases-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cases-filters {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        padding: 0 1rem;
+    }
+
+    .pill {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .cases-arrow {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+
+    .case-caption {
+        font-size: 0.9rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .case-tag {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+
+    /* 城市更新 */
+    .cases-library {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .cases-library .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .cases-library .section-header .muted {
+        font-size: 0.9rem;
+    }
+
+
+    .cases-library .cases-grid {
+        display: block;
+        padding: 0;
+    }
+
+    .case-media {
+        margin-bottom: 1rem;
+    }
+
+    .case-meta {
+        max-width: 88%;
+    }
+
+    .case-meta .case-tag {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+        margin-bottom: 8px;
+    }
+
+    .case-meta h3 {
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+    }
+
+    .case-meta .short {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .case-cta {
+        padding: 12px 16px;
+        font-size: 1rem;
+    }
+
+    /* 建筑设计图 */
+    .architectural-designs-section {
+        padding: 2.5rem 1.5rem;
+    }
+    .architectural-designs-section .section-header h2{
+        font-size: 1.8rem;
+    }
+    .architectural-designs-section .section-header .muted{
+        font-size: 0.9rem;
+    }
+
+    .designs-showcase {
+        display: flex;
+        flex-direction: column;
+
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .design-large img {
+        height: 280px;
+    }
+
+    .design-grid {
+        gap: 1rem;
+    }
+
+  
+
+    .design-overlay h3 {
+        font-size: 1.2rem;
+    }
+
+    .design-overlay h4 {
+        font-size: 1rem;
+    }
+
+    .design-link {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .view-more-designs {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .view-more-designs .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.85rem 1.8rem;
+        font-size: 0.95rem;
+    }
+
+    /* 咨询横幅 */
+    .consultation-banner {
+        min-height: 360px;
+    }
+
+    .banner-main-title {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .banner-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
     .btn-consultation {
-        padding: 1rem 2rem;
+        padding: 0.85rem 1.8rem;
+        font-size: 0.95rem;
     }
 }

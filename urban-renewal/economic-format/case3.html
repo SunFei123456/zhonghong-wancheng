@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例详情 - 融通苏州桐泾北路改造 | 中鸿万城</title>
+    <link rel="stylesheet" href="../style/slider.css">
+    <style>
+        /* 自定义图片背景 - 融通苏州桐泾北路改造 */
+        .example-slider .fnc-slide-1 .fnc-slide__inner,
+        .example-slider .fnc-slide-1 .fnc-slide__mask-inner {
+            background-image: url('./images/3-1.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .example-slider .fnc-slide-2 .fnc-slide__inner,
+        .example-slider .fnc-slide-2 .fnc-slide__mask-inner {
+            background-image: url('./images/3-2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .example-slider .fnc-slide-3 .fnc-slide__inner,
+        .example-slider .fnc-slide-3 .fnc-slide__mask-inner {
+            background-image: url('./images/3-3.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .example-slider .fnc-slide-4 .fnc-slide__inner,
+        .example-slider .fnc-slide-4 .fnc-slide__mask-inner {
+            background-image: url('./images/3-4.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .example-slider .fnc-slide-5 .fnc-slide__inner,
+        .example-slider .fnc-slide-5 .fnc-slide__mask-inner {
+            background-image: url('./images/3-5.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .example-slider .fnc-slide-6 .fnc-slide__inner,
+        .example-slider .fnc-slide-6 .fnc-slide__mask-inner {
+            background-image: url('./images/3-6.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .example-slider .fnc-slide-7 .fnc-slide__inner,
+        .example-slider .fnc-slide-7 .fnc-slide__mask-inner {
+            background-image: url('./images/3-7.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .example-slider .fnc-slide-8 .fnc-slide__inner,
+        .example-slider .fnc-slide-8 .fnc-slide__mask-inner {
+            background-image: url('./images/3-8.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* 覆盖原CSS - 只保留大图轮播效果 */
+        /* 隐藏标题文本 */
+        .fnc-slide__heading {
+            display: none !important;
+        }
+
+        /* 隐藏遮罩层 */
+        .fnc-slide__mask {
+            display: none !important;
+        }
+
+        /* 隐藏底部导航背景，但保留控制按钮 */
+        .fnc-nav__bgs {
+            display: none !important;
+        }
+
+        /* 保留查看详情按钮，调整位置到底部居中 */
+        .fnc-slide__content {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: flex-end !important;
+            width: 100% !important;
+            height: 100% !important;
+            left: 0 !important;
+            top: 0 !important;
+            transform: none !important;
+            padding-bottom: 60px !important;
+        }
+
+        .fnc-slide__action-btn {
+            position: relative !important;
+            margin: 0 !important;
+            z-index: 10 !important;
+        }
+
+        /* 确保图片完整显示 */
+        .fnc-slide__inner {
+            background-size: contain !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+
+        /* 调整轮播容器 */
+        .fnc-slider {
+            height: 100vh !important;
+        }
+
+        .fnc-slider__slides {
+            height: 100% !important;
+        }
+
+        .fnc-slide {
+            height: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo-cont">
+        <!-- 返回按钮 -->
+        <a href="../../urban-renewal.html" class="back-button" title="返回上一页">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <span>返回</span>
+        </a>
+
+        <!-- slider start -->
+        <div class="fnc-slider example-slider">
+            <div class="fnc-slider__slides">
+                <!-- slide 1 -->
+                <div class="fnc-slide m--blend-green m--active-slide">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide 2 -->
+                <div class="fnc-slide m--blend-dark">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide 3 -->
+                <div class="fnc-slide m--blend-red">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide 4 -->
+                <div class="fnc-slide m--blend-blue">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide 5 -->
+                <div class="fnc-slide m--blend-green">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide 6 -->
+                <div class="fnc-slide m--blend-dark">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide 7 -->
+                <div class="fnc-slide m--blend-green">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide 8 -->
+                <div class="fnc-slide m--blend-dark">
+                    <div class="fnc-slide__inner">
+                        <div class="fnc-slide__mask">
+                            <div class="fnc-slide__mask-inner"></div>
+                        </div>
+                        <div class="fnc-slide__content">
+                            <button type="button" class="fnc-slide__action-btn">
+                                查看详情
+                                <span data-text="查看详情">查看详情</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="fnc-nav">
+                <div class="fnc-nav__bgs">
+                    <div class="fnc-nav__bg m--navbg-green m--active-nav-bg"></div>
+                    <div class="fnc-nav__bg m--navbg-dark"></div>
+                    <div class="fnc-nav__bg m--navbg-red"></div>
+                    <div class="fnc-nav__bg m--navbg-blue"></div>
+                    <div class="fnc-nav__bg m--navbg-green"></div>
+                    <div class="fnc-nav__bg m--navbg-dark"></div>
+                    <div class="fnc-nav__bg m--navbg-green"></div>
+                    <div class="fnc-nav__bg m--navbg-dark"></div>
+                </div>
+                <div class="fnc-nav__controls">
+                    <button class="fnc-nav__control">
+                        图片1
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                    <button class="fnc-nav__control">
+                        图片2
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                    <button class="fnc-nav__control">
+                        图片3
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                    <button class="fnc-nav__control">
+                        图片4
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                    <button class="fnc-nav__control">
+                        图片5
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                    <button class="fnc-nav__control">
+                        图片6
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                    <button class="fnc-nav__control">
+                        图片7
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                    <button class="fnc-nav__control">
+                        图片8
+                        <span class="fnc-nav__control-progress"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <!-- slider end -->
+
+        <!-- Credits 详情面板 -->
+        <div class="demo-cont__credits">
+            <div class="demo-cont__credits-close"></div>
+            <h2 class="demo-cont__credits-heading">项目详情</h2>
+            <h3 class="demo-cont__credits-name">融通苏州桐泾北路改造</h3>
+
+            <div class="demo-cont__credits-section">
+                <h4>项目概况</h4>
+                <p>融通苏州桐泾北路改造项目，打造城市景观、历史文脉和商业发展协同的立体游园空间，实现最具精致烟火气的城市更新典范。</p>
+            </div>
+
+            <div class="demo-cont__credits-section">
+                <h4>设计理念</h4>
+                <ul>
+                    <li><strong>景观融合：</strong>城市景观与历史文脉完美结合，营造独特的空间氛围</li>
+                    <li><strong>商业协同：</strong>商业发展与文化传承有机统一，打造活力街区</li>
+                    <li><strong>立体游园：</strong>多层次空间设计，创造丰富的游览体验</li>
+                    <li><strong>烟火气息：</strong>保留地域特色，传承精致生活方式</li>
+                </ul>
+            </div>
+
+            <div class="demo-cont__credits-section">
+                <h4>项目特色</h4>
+                <p>通过精心规划和设计，将传统街区改造为集文化展示、商业休闲、景观体验于一体的综合性城市空间，成为苏州城市更新的标杆项目。</p>
+            </div>
+
+            <div class="demo-cont__credits-section">
+                <h4>空间亮点</h4>
+                <ul>
+                    <li>保留历史建筑风貌，传承江南水乡特色</li>
+                    <li>引入现代商业业态，激活街区活力</li>
+                    <li>打造多层次景观空间，丰富游览体验</li>
+                    <li>融合传统与现代，展现城市更新新面貌</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/slider.js"></script>
+    <script>
+        // Credits 面板交互
+        var $demoCont = document.querySelector(".demo-cont");
+
+        [].slice.call(document.querySelectorAll(".fnc-slide__action-btn")).forEach(function ($btn) {
+            $btn.addEventListener("click", function () {
+                $demoCont.classList.toggle("credits-active");
+            });
+        });
+
+        document.querySelector(".demo-cont__credits-close").addEventListener("click", function () {
+            $demoCont.classList.remove("credits-active");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,146 +1,186 @@
 /* 设计可视化主页 */
 
-.container-wide{ max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
+.container-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
 
-.dv-label{ 
-  display: inline-block; 
-  font-size: 0.7rem; 
-  text-transform: uppercase; 
-  letter-spacing: 0.2em; 
-  color: #d12b26; 
-  font-weight: 700; 
+.dv-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #d12b26;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
 /* Hero */
-.dv-hero{ 
-  position: relative; 
-  height: 80vh; 
-  min-height: 600px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  color: #ffffff; 
-  overflow: hidden; 
+.dv-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  overflow: hidden;
 }
-.dv-hero-bg{ 
-  position: absolute; 
-  inset: 0; 
-  background-size: cover; 
-  background-position: center; 
-  filter: brightness(0.4);
+
+.dv-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.75);
 }
-.dv-hero:after{ 
-  content: ""; 
-  position: absolute; 
-  inset: 0; 
-  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+
+
+
+.dv-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
 }
-.dv-hero-content{ 
-  position: relative; 
-  z-index: 2; 
-  text-align: center; 
-  max-width: 900px; 
-}
-.dv-hero-title{ 
-  font-size: 5rem; 
-  font-weight: 900; 
+
+.dv-hero-title {
+  font-size: 4rem;
+  font-weight: 900;
   margin-bottom: 1.5rem;
 }
-.dv-hero-subtitle{ 
-  font-size: 1.8rem; 
-  margin-bottom: 1rem; 
+
+.dv-hero-subtitle {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
   font-weight: 300;
 }
-.dv-hero-desc{
-  font-size: 1.2rem;
-  opacity: 0.9;
+
+.dv-hero-tags {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.dv-tag {
+  padding: 0.8rem 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.dv-tag:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
 }
 
 /* 概览 */
-.dv-intro{
+.dv-intro {
   padding: 8rem 0;
   background: #ffffff;
   text-align: center;
 }
-.dv-intro-content{
+
+.dv-intro-content {
   max-width: 800px;
   margin: 0 auto;
 }
-.dv-intro-content h2{
+
+.dv-intro-content h2 {
   font-size: 3rem;
   font-weight: 900;
   color: #0b2b3a;
   margin-bottom: 1.5rem;
 }
-.dv-intro-content p{
+
+.dv-intro-content p {
   font-size: 1.2rem;
   line-height: 2;
   color: #4b5563;
 }
 
 /* 服务板块 */
-.dv-services{
+.dv-services {
   padding: 0;
 }
-.dv-service-card{
+
+.dv-service-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 70vh;
   align-items: center;
   background: #f9fafb;
 }
-.dv-service-card:nth-child(even){
+
+.dv-service-card:nth-child(even) {
   background: #ffffff;
 }
-.dv-service-image{
+
+.dv-service-image {
   position: relative;
   height: 100%;
   min-height: 600px;
   overflow: hidden;
 }
-.dv-service-image img{
+
+.dv-service-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
 }
-.dv-service-card:hover .dv-service-image img{
+
+.dv-service-card:hover .dv-service-image img {
   transform: scale(1.08);
 }
-.dv-service-overlay{
+
+.dv-service-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(209,43,38,0.9);
+  background: rgba(209, 44, 38, 0.499);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
-.dv-service-card:hover .dv-service-overlay{
+
+.dv-service-card:hover .dv-service-overlay {
   opacity: 1;
 }
-.dv-service-overlay i{
+
+.dv-service-overlay i {
   font-size: 6rem;
   color: #ffffff;
 }
-.dv-service-content{
+
+.dv-service-content {
   padding: 6rem;
 }
-.dv-service-content h3{
+
+.dv-service-content h3 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #0b2b3a;
   margin-bottom: 1.5rem;
 }
-.dv-service-content p{
+
+.dv-service-content p {
   font-size: 1.15rem;
   line-height: 1.8;
   color: #4b5563;
   margin-bottom: 2rem;
 }
-.dv-feature-list{
+
+.dv-feature-list {
   list-style: none;
   padding: 0;
   display: grid;
@@ -148,148 +188,86 @@
   gap: 1rem;
   margin-bottom: 3rem;
 }
-.dv-feature-list li{
+
+.dv-feature-list li {
   display: flex;
   align-items: center;
   gap: 0.8rem;
   font-size: 1rem;
   color: #374151;
 }
-.dv-feature-list i{
+
+.dv-feature-list i {
   color: #d12b26;
   font-size: 1rem;
 }
-.dv-service-card.reverse{
+
+.dv-service-card.reverse {
   grid-template-columns: 1fr 1fr;
 }
-.dv-service-card.reverse .dv-service-content{
+
+.dv-service-card.reverse .dv-service-content {
   order: 1;
 }
-.dv-service-card.reverse .dv-service-image{
+
+.dv-service-card.reverse .dv-service-image {
   order: 2;
 }
 
-/* 服务流程 */
-.dv-process{
-  padding: 10rem 0;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafb 100%);
-}
-.dv-section-header{
-  text-align: center;
-  margin-bottom: 5rem;
-}
-.dv-section-header h2{
-  font-size: 3rem;
-  font-weight: 900;
-  color: #0b2b3a;
-}
-.dv-process-grid{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
-}
-.dv-process-item{
-  text-align: center;
-  padding: 2.5rem 1.5rem;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(9,20,40,0.06);
-  transition: all 0.3s ease;
-}
-.dv-process-item:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(9,20,40,0.12);
-}
-.dv-process-num{
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  margin: 0 auto 1.5rem;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #d12b26, #f7532e);
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 900;
-}
-.dv-process-item h4{
-  font-size: 1.3rem;
-  color: #0b2b3a;
-  margin-bottom: 0.8rem;
-}
-.dv-process-item p{
-  font-size: 0.95rem;
-  color: #6b7280;
-  line-height: 1.6;
-}
-
-/* CTA */
-.dv-cta{
-  padding: 12rem 0;
-  background: linear-gradient(135deg, #0b2b3a 0%, #1a4d5e 100%);
-  text-align: center;
-  color: #ffffff;
-}
-.dv-cta-content h2{
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 1.5rem;
-}
-.dv-cta-content p{
-  font-size: 1.3rem;
-  margin-bottom: 3rem;
-  opacity: 0.9;
-}
-.dv-cta-actions{
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-.btn-lg{
-  padding: 1.2rem 3rem;
-  font-size: 1.1rem;
-}
-.btn-outline{
-  background: transparent;
-  border: 2px solid rgba(255,255,255,0.3);
-  color: #ffffff;
-}
-.btn-outline:hover{
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.6);
-}
-
 /* 响应式 */
-@media (max-width: 1200px){
-  .dv-service-card, .dv-service-card.reverse{
+@media (max-width: 1200px) {
+
+  .dv-service-card,
+  .dv-service-card.reverse {
     grid-template-columns: 1fr;
   }
-  .dv-service-content, .dv-service-card.reverse .dv-service-content{
+
+  .dv-service-content,
+  .dv-service-card.reverse .dv-service-content {
     order: 2;
     padding: 4rem 3rem;
   }
-  .dv-service-image{
+
+  .dv-service-image {
     order: 1;
     min-height: 400px;
   }
-  .dv-process-grid{
-    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  .container-wide {
+    padding: 0 1.5rem;
+  }
+
+  .dv-hero {
+    min-height: 500px;
+  }
+
+  .dv-hero-title {
+    font-size: 3rem;
+  }
+
+  .dv-hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .dv-intro {
+    padding: 6rem 0;
+  }
+
+  .dv-intro-content h2 {
+    font-size: 2rem;
+  }
+
+  .dv-intro-content p {
+    font-size: 1.1rem;
+  }
+
+  .dv-service-content h3 {
+    font-size: 2rem;
+  }
+
+  .dv-feature-list {
+    grid-template-columns: 1fr;
   }
 }
-
-@media (max-width: 768px){
-  .container-wide{ padding: 0 1.5rem; }
-  .dv-hero{ min-height: 500px; }
-  .dv-hero-title{ font-size: 3rem; }
-  .dv-hero-subtitle{ font-size: 1.3rem; }
-  .dv-intro{ padding: 6rem 0; }
-  .dv-intro-content h2{ font-size: 2rem; }
-  .dv-intro-content p{ font-size: 1.1rem; }
-  .dv-service-content h3{ font-size: 2rem; }
-  .dv-feature-list{ grid-template-columns: 1fr; }
-  .dv-process{ padding: 6rem 0; }
-  .dv-section-header h2{ font-size: 2rem; }
-  .dv-process-grid{ grid-template-columns: 1fr; }
-  .dv-cta{ padding: 8rem 0; }
-  .dv-cta-content h2{ font-size: 2rem; }
-}
-

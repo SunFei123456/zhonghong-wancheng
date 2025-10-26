@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         offset: 100
     });
 
-    // 初始化轮播图
+    // 初始化轮播图 - 淡入淡出效果
     const heroSwiper = new Swiper('.hero-swiper', {
         loop: true,
         autoplay: {
@@ -18,10 +18,11 @@ document.addEventListener('DOMContentLoaded', function () {
             el: '.swiper-pagination',
             clickable: true,
         },
+        speed: 1000,
         effect: 'fade',
         fadeEffect: {
-            crossFade: true
-        }
+            crossFade: true,
+        },
     });
 
     // 导航栏功能
@@ -49,22 +50,32 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.nav-item').forEach(item => {
         const link = item.querySelector('.nav-link');
         const dropdown = item.querySelector('.dropdown-menu');
+        const arrow = item.querySelector('.dropdown-arrow');
 
-        if (dropdown) {
-            link.addEventListener('click', function (e) {
-                // 在移动端阻止默认行为，显示下拉菜单
+        if (dropdown && arrow) {
+            // 点击箭头时切换下拉菜单
+            arrow.addEventListener('click', function (e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
+                    e.stopPropagation(); // 阻止事件冒泡到链接
+                    
+                    // 切换当前下拉菜单和箭头状态
+                    const isActive = dropdown.classList.contains('active');
                     dropdown.classList.toggle('active');
+                    item.classList.toggle('dropdown-active', !isActive);
 
-                    // 关闭其他下拉菜单
-                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                        if (menu !== dropdown) {
-                            menu.classList.remove('active');
+                    // 关闭其他下拉菜单和箭头
+                    document.querySelectorAll('.nav-item').forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.dropdown-menu')?.classList.remove('active');
+                            otherItem.classList.remove('dropdown-active');
                         }
                     });
                 }
             });
+
+            // 点击链接文字时正常跳转（不阻止默认行为）
+            // 在移动端，链接本身可以正常跳转到对应页面
         }
     });
 
@@ -94,6 +105,10 @@ document.addEventListener('DOMContentLoaded', function () {
             navMenu.classList.remove('active');
             document.querySelectorAll('.dropdown-menu').forEach(menu => {
                 menu.classList.remove('active');
+            });
+            // 同时移除所有箭头旋转状态
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('dropdown-active');
             });
         }
     });
