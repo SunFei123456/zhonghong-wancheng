@@ -97,11 +97,11 @@
                 </div>
                 <div class="m-intro-stats" data-aos="fade-left">
                     <div class="m-kpi">
-                        <div class="num">9+</div>
+                        <div class="num"><span class="counter" data-count="9">0</span>+</div>
                         <div class="label">行业年限</div>
                     </div>
                     <div class="m-kpi">
-                        <div class="num">100+</div>
+                        <div class="num"><span class="counter" data-count="100">0</span>+</div>
                         <div class="label">交付项目</div>
                     </div>
                     <div class="m-kpi">
@@ -173,7 +173,7 @@
                     <p>联系我们，获得初步诊断与工期/预算建议。</p>
                 </div>
                 <div class="m-cta-actions" data-aos="fade-left">
-                  
+
                     <a class="btn btn-outline" style="background: #FFFFFF;color: #C91F37;" href="contact.html"><i
                             class="fas fa-envelope"></i> 联系我们</a>
                 </div>
@@ -293,6 +293,49 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./script.js"></script>
+
+    <!-- 数字滚动动画 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 数字滚动动画函数
+            function animateCounter(element, target, duration) {
+                let start = 0;
+                const increment = target / (duration / 16); // 60fps
+                const timer = setInterval(() => {
+                    start += increment;
+                    if (start >= target) {
+                        element.textContent = Math.floor(target);
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(start);
+                    }
+                }, 16);
+            }
+
+            // 使用 Intersection Observer 检测元素是否进入视口
+            const statsSection = document.querySelector('.m-intro-stats');
+            let hasAnimated = false;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        hasAnimated = true;
+                        // 启动所有计数器动画
+                        document.querySelectorAll('.counter').forEach(counter => {
+                            const target = parseInt(counter.getAttribute('data-count'));
+                            animateCounter(counter, target, 2500); // 2.5秒
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+        });
+    </script>
 </body>
 
 </html>

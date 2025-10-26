@@ -92,19 +92,19 @@
                 </div>
                 <div class="about-stats">
                     <div class="about-stat-item" data-aos="zoom-in">
-                        <div class="about-stat-num">15+</div>
+                        <div class="about-stat-num"><span class="counter" data-count="15">0</span>+</div>
                         <div class="about-stat-label">年行业经验</div>
                     </div>
                     <div class="about-stat-item" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="about-stat-num">500+</div>
+                        <div class="about-stat-num"><span class="counter" data-count="500">0</span>+</div>
                         <div class="about-stat-label">完成项目</div>
                     </div>
                     <div class="about-stat-item" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="about-stat-num">200+</div>
+                        <div class="about-stat-num"><span class="counter" data-count="200">0</span>+</div>
                         <div class="about-stat-label">专业团队</div>
                     </div>
                     <div class="about-stat-item" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="about-stat-num">98%</div>
+                        <div class="about-stat-num"><span class="counter" data-count="98">0</span>%</div>
                         <div class="about-stat-label">客户满意度</div>
                     </div>
                 </div>
@@ -502,6 +502,50 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./script.js"></script>
+
+    <!-- 数字滚动动画 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 数字滚动动画函数
+            function animateCounter(element, target, duration) {
+                let start = 0;
+                const increment = target / (duration / 16); // 60fps
+                const timer = setInterval(() => {
+                    start += increment;
+                    if (start >= target) {
+                        element.textContent = Math.floor(target);
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(start);
+                    }
+                }, 16);
+            }
+
+            // 使用 Intersection Observer 检测元素是否进入视口
+            const statsSection = document.querySelector('.about-stats');
+            let hasAnimated = false;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        hasAnimated = true;
+                        // 启动所有计数器动画
+                        document.querySelectorAll('.counter').forEach(counter => {
+                            const target = parseInt(counter.getAttribute('data-count'));
+                            animateCounter(counter, target, 2500); // 2.5秒
+                        });
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+        });
+    </script>
+
     <script>
         // 荣誉资质轮播 - Coverflow 3D效果
         const honorsSwiper = new Swiper('.honors-swiper', {
