@@ -17,7 +17,7 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.75);
+
 }
 
 .m-hero-content {
@@ -350,7 +350,7 @@
 
   .m-intro-stats {
     display: block;
-    
+
   }
 
   .m-kpi {
@@ -454,4 +454,3 @@
     justify-content: center;
   }
 }
-

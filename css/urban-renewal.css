@@ -28,7 +28,7 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.75)
+
 }
 
 
@@ -519,6 +519,7 @@
     margin: 0 auto 4rem;
     padding: 0 1.5rem;
   }
+
   .ur-vision-content h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -564,26 +565,29 @@
   }
 
   /* 轮播容器 - 移动端简化为垂直堆叠 */
-  .ur-carousel-content{
+  .ur-carousel-content {
     padding: 1rem;
-    top: 80%;    
+    top: 80%;
     left: 10px;
     width: auto;
   }
-  .ur-carousel-name{
+
+  .ur-carousel-name {
     font-size: 1.5rem;
     margin-bottom: 0.2rem;
   }
-  .ur-carousel-des{
+
+  .ur-carousel-des {
     font-size: 0.9rem;
     margin-top: 0rem;
     margin-bottom: 1rem;
   }
-  .ur-carousel-btn{
+
+  .ur-carousel-btn {
     padding: 0.8rem 2rem;
     font-size: 0.9rem;
   }
- 
+
 
 
   /* CTA 区域 */
@@ -620,4 +624,3 @@
     text-align: center;
   }
 }
-
