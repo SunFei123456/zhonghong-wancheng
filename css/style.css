@@ -265,8 +265,9 @@ body {
 }
 
 .dropdown-item {
+    font-size: 0.9rem;
     display: block;
-    padding: 0.7rem 1.5rem;
+    padding: 0.7rem 1.2rem;
     color: #666666;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -280,7 +281,6 @@ body {
 .dropdown-item:hover {
     background: #F5F5F5;
     color: #C91F37;
-    padding-left: 2rem;
 }
 
 .nav-toggle {

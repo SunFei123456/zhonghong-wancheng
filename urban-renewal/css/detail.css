@@ -1,0 +1,238 @@
+/* 城市更新详情页通用样式 */
+
+/* Hero区域 */
+.detail-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.detail-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+
+.detail-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 0 2rem;
+    max-width: 1200px;
+}
+
+.detail-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.detail-hero-subtitle {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 主要内容区域 */
+.detail-section {
+    padding: 3rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.detail-section-header {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.detail-section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.detail-section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 1.5rem;
+    line-height: 1.8;
+}
+
+/* 卡片网格 */
+.detail-card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.detail-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+}
+
+.detail-card-image {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #e5e7eb;
+}
+
+.detail-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+
+
+.detail-card-content {
+    padding: 1rem 0.8rem;
+}
+
+.detail-card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+
+
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .detail-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-hero {
+        height: 50vh;
+        min-height: 400px;
+    }
+
+    .detail-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .detail-hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .detail-section {
+        padding: 4rem 0;
+    }
+    .detail-section-header{
+        margin-bottom: 1rem;
+    }
+
+    .detail-section-header h2 {
+        font-size: 1.5rem;
+        margin-left: 1.5rem;
+    }
+
+    .detail-card-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .detail-card-image {
+        height: 220px;
+    }
+
+    .detail-card-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-hero h1 {
+        font-size: 2rem;
+    }
+
+    .detail-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .detail-card-grid {
+        padding: 0 1rem;
+    }
+
+    .detail-card-image {
+        height: 200px;
+    }
+}
+
+/* 动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.detail-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.detail-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.detail-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.detail-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.detail-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.detail-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.detail-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
